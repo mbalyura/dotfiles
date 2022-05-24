@@ -131,6 +131,7 @@ alias xampp='sudo /opt/lampp/xampp'
 alias mountgdr='google-drive-ocamlfuse ~/mygoogledrive'
 alias ch7='sudo chmod -R 777'
 alias ch6='sudo chmod -R 666'
+alias dotfiles='make backup -C ~/dev/dotfiles/'
 
 ###
 export PATH="$HOME/bin:$HOME/bin/PhpStorm/bin:$PATH"
