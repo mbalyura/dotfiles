@@ -140,3 +140,17 @@ export VISUAL='micro'
 
 ###
 . ~/bin/z.sh
+alias sunrise="/home/f1del/dev/sunrise/bin/compose.sh"
+alias sunrise-up="/home/f1del/dev/sunrise/bin/compose.sh up -d"
+alias sunrise-down="/home/f1del/dev/sunrise/bin/compose.sh down"
+alias sunrise-stop="/home/f1del/dev/sunrise/bin/compose.sh stop"
+alias sunrise-restart="/home/f1del/dev/sunrise/bin/compose.sh restart"
+alias sunrise-bash="/home/f1del/dev/sunrise/bin/compose.sh run --rm app bash"
+alias sunrise-yarn-watch="/home/f1del/dev/sunrise/bin/compose.sh run --rm node yarn run watch-poll"
+alias limb="/home/f1del/dev/limb/bin/compose.sh"
+alias limb-up="/home/f1del/dev/limb/bin/compose.sh up -d"
+alias limb-down="/home/f1del/dev/limb/bin/compose.sh down"
+alias limb-stop="/home/f1del/dev/limb/bin/compose.sh stop"
+alias limb-restart="/home/f1del/dev/limb/bin/compose.sh restart"
+alias limb-bash="/home/f1del/dev/limb/bin/compose.sh run --rm app bash"
+alias limb-yarn-watch="/home/f1del/dev/limb/bin/compose.sh run --rm node yarn run watch"

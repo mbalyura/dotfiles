@@ -1,0 +1,307 @@
+{
+    "files.autoSave": "onFocusChange",
+    "update.mode": "start",
+    "window.menuBarVisibility": "hidden",
+
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#111111",
+            "strikethrough": false,
+            "backgroundColor": "#FF2D00"
+        },
+        {
+            "tag": "?",
+            "color": "#111111",
+            "strikethrough": false,
+            "backgroundColor": "#3498DB"
+        },
+        {
+            "tag": "//",
+            "color": "#98C379",
+            // "color": "#474747",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "todo",
+            "color": "#111111",
+            "strikethrough": false,
+            "backgroundColor": "#FF8C00"
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ],
+
+    //old sync
+    "sync.gist": "fa6c74d096602446b01bf9edffd2f417",
+    "sync.autoUpload": true,
+
+    "files.defaultLanguage": "JavaScript",
+    "files.trimFinalNewlines": true,
+    "window.openFoldersInNewWindow": "on",
+    "window.newWindowDimensions": "maximized",
+
+    "prettier.proseWrap": "never",
+    "prettier.singleQuote": true,
+    "togglequotes.chars": [
+        "`",
+        "\"",
+        "'"
+    ],
+
+    "files.associations": {
+        "*.twig": "html",
+        "*.tpl": "php"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.tabSize": 2
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.tabSize": 4
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "turboConsoleLog.quote": "'",
+    "turboConsoleLog.addSemicolonInTheEnd": true,
+    "turboConsoleLog.insertEnclosingClass": false,
+    "turboConsoleLog.insertEnclosingFunction": false,
+    "turboConsoleLog.includeFileNameAndLineNum": false,
+    "debugwrapper.wrappers": {
+        "javascript": "console.log('$eSEL', $SEL)",
+        "typescript": "console.log('$eSEL', $SEL)",
+        "vue": "console.log('$eSEL', $SEL)",
+        "php": "echo '$eSEL : '; var_dump($SEL);",
+        "default": "console.log('$eSEL', $SEL)"
+    },
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "ecsstractor_port.bem_nesting": true,
+
+
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+
+
+    "atlascode.bitbucket.explorer.refreshInterval": 60,
+    "atlascode.bitbucket.pipelines.explorerEnabled": false,
+    "atlascode.jira.enabled": true,
+    "atlascode.jira.explorer.enabled": true,
+    "atlascode.jira.explorer.fetchAllQueryResults": true,
+    "atlascode.jira.explorer.monitorEnabled": true,
+    "atlascode.jira.explorer.nestSubtasks": true,
+    "atlascode.jira.explorer.refreshInterval": 30,
+    "atlascode.jira.hover.enabled": false,
+    "atlascode.jira.statusbar.enabled": true,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "70bd5fc1-603c-4f04-9223-0683d7622368",
+            "enabled": true,
+            "name": "My horoshop Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "53d1444e-9ebb-46c2-8a29-75b88cffdcd0",
+            "monitor": true
+        }
+    ],
+    "yaml.schemas": {
+        "file:///home/f1del/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+
+
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+
+    "workbench.colorTheme": "Monokai Night",
+    "workbench.list.smoothScrolling": true,
+
+    "editor.tabSize": 2,
+    "editor.autoClosingDelete": "always",
+    "editor.find.addExtraSpaceOnTop": false,
+    "editor.mouseWheelScrollSensitivity": 1.5,
+    "editor.smoothScrolling": true,
+    "editor.wordSeparators": "`~!@#%^&*()-_=+[{]}\\|;:'\",.<>/?",
+    "editor.renderWhitespace": "all",
+
+    "code-eol.newlineCharacter": "¬",
+    "code-eol.returnCharacter" : "¤",
+    "code-eol.crlfCharacter"   : "¤¬",
+
+    "editor.renderControlCharacters": true,
+    "editor.suggest.preview": true,
+    "editor.fastScrollSensitivity": 4,
+
+
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": true,
+
+    "git.terminalAuthentication": false,
+    "git.autofetch": "all",
+    "gitlens.views.branches.branches.layout": "list",
+    "redhat.telemetry.enabled": false,
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1655368122899,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.enablePreview": true, // open files temporary!!!!
+
+    // "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    // "bracket-pair-colorizer-2.showBracketsInRuler": true,
+
+
+    "workbench.colorCustomizations": {
+        "[Monokai Night]": {
+            "sideBar.background": "#151515",
+            "editorWhitespace.foreground": "#333"
+        },
+
+        // "editorIndentGuide.activeBackground": "#aaa",
+        "editorIndentGuide.background": "#2c2c2c",
+    },
+
+    "editor.tokenColorCustomizations": {
+        "[Monokai Night]": {
+            "textMateRules": [
+                {
+                    "scope": "keyword.control.if.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    },
+                },
+                {
+                    "scope": "keyword.control.else.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    },
+                },
+                {
+                    "scope": "keyword.control.elseif.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    },
+                },
+                {
+                    "scope": "keyword.control.endif.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.control.foreach.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.control.endforeach.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.control.for.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.control.endfor.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
+                }
+
+            ]
+        }
+    },
+
+    //brackets
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active", //true, false, active
+    "editor.guides.bracketPairsHorizontal": "active",
+    // "editor.guides.indentation": true,
+    // "editor.guides.highlightActiveIndentation": true,
+
+    // "editor.minimap.size": "fill",
+    // "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 50,
+
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "tabnine.experimentalAutoImports": true,
+    "ecsstractor_port.add_comment": false,
+    "ecsstractor_port.brackets_newline_after": false,
+    "ecsstractor_port.indentation": " ",
+    "customWindowZoom.zoomLevelChangeValue": 0.05,
+
+    "search.maxResults": null,
+    "gulp.autoDetect": "on",
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "53d1444e-9ebb-46c2-8a29-75b88cffdcd0",
+        "projectKey": "B2B"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "gitlens.codeLens.enabled": false,
+    // "search.useIgnoreFiles": false,
+
+    "wrapSelection.patterns": {
+        "t": "{{ $t('${text}') }}",
+        "tt": "this.$t(${text})",
+        "ta": "$t('${text}')",
+        "td": "_t(${text})",
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "timeline.excludeSources": [
+        "timeline.localHistory"
+    ],
+
+    "eslint.workingDirectories": [
+        {"mode": "auto"}
+    ],
+
+
+    "phpcs.enable": true,
+    "phpcs.ignorePatterns": ["*/vendor/*"],
+    "phpcs.standard": "PSR2",
+    "phpcs.executablePath": "/home/f1del/.config/composer/vendor/bin/phpcs",
+
+
+    "gitlens.defaultDateFormat": null,
+    "gitlens.defaultDateShortFormat": null,
+    "gitlens.defaultTimeFormat": null,
+    "gitlens.defaultDateStyle": "absolute",
+    "thunder-client.codeSnippetLanguage": "curl",
+    "thunder-client.htmlView": "Preview",
+    "window.zoomLevel": 0,
+    "gitlens.views.commits.pullRequests.showForBranches": false,
+    "gitlens.views.commits.pullRequests.enabled": false,
+    "gitlens.views.commits.files.layout": "list",
+    "editor.minimap.enabled": false,
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    "gitlens.views.fileHistory.files.layout": "tree",
+    "gitlens.views.fileHistory.files.compact": false,
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+
+}
