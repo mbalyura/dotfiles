@@ -1,7 +1,12 @@
 {
     "files.autoSave": "onFocusChange",
     "update.mode": "start",
-    "window.menuBarVisibility": "hidden",
+
+    "window.openFoldersInNewWindow": "on",
+    "window.newWindowDimensions": "maximized",
+    "window.commandCenter": true,
+    "window.zoomLevel": -0.15,
+
 
     "better-comments.tags": [
         {
@@ -38,13 +43,11 @@
     ],
 
     //old sync
-    "sync.gist": "fa6c74d096602446b01bf9edffd2f417",
-    "sync.autoUpload": true,
+    // "sync.gist": "fa6c74d096602446b01bf9edffd2f417",
+    // "sync.autoUpload": true,
 
     "files.defaultLanguage": "JavaScript",
     "files.trimFinalNewlines": true,
-    "window.openFoldersInNewWindow": "on",
-    "window.newWindowDimensions": "maximized",
 
     "prettier.proseWrap": "never",
     "prettier.singleQuote": true,
@@ -120,8 +123,6 @@
 
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
-
-    "workbench.colorTheme": "Monokai Night",
     "workbench.list.smoothScrolling": true,
 
     "editor.tabSize": 2,
@@ -140,6 +141,8 @@
     "editor.suggest.preview": true,
     "editor.fastScrollSensitivity": 4,
 
+    "editor.multiCursorModifier": "alt",
+
 
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": true,
@@ -149,7 +152,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1655368122899,
+    "php-cs-fixer.lastDownload": 1660131371699,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.editor.enablePreview": true, // open files temporary!!!!
 
@@ -271,7 +274,6 @@
         "ta": "$t('${text}')",
         "td": "_t(${text})",
     },
-    "editor.multiCursorModifier": "ctrlCmd",
     "timeline.excludeSources": [
         "timeline.localHistory"
     ],
@@ -291,17 +293,49 @@
     "gitlens.defaultDateShortFormat": null,
     "gitlens.defaultTimeFormat": null,
     "gitlens.defaultDateStyle": "absolute",
-    "thunder-client.codeSnippetLanguage": "curl",
+    "thunder-client.codeSnippetLanguage": "js-fetch",
     "thunder-client.htmlView": "Preview",
-    "window.zoomLevel": 0,
     "gitlens.views.commits.pullRequests.showForBranches": false,
     "gitlens.views.commits.pullRequests.enabled": false,
     "gitlens.views.commits.files.layout": "list",
     "editor.minimap.enabled": false,
-    "gitlens.advanced.fileHistoryFollowsRenames": true,
-    "gitlens.views.fileHistory.files.layout": "tree",
-    "gitlens.views.fileHistory.files.compact": false,
+    "gitlens.views.fileHistory.files.threshold": 5,
     "files.trimTrailingWhitespace": true,
-    "diffEditor.renderSideBySide": false,
+    "database-client.showFilter": true,
+    "database-client.showQuery": true,
+    "workbench.colorTheme": "Monokai Night",
+    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    "material-icon-theme.activeIconPack": "vue_vuex",
 
+    //!new
+    // "git.mergeEditor": true,
+    "editor.experimental.stickyScroll.enabled": true,
+
+    "workbench.editor.tabCloseButton": "off", // removes cross icon from tabs
+    "editor.lineDecorationsWidth": 3,
+
+    "customizeUI.activityBar": "bottom",
+    // "customizeUI.activityBar": "top",
+    "customizeUI.activityBarHideSettings": false,
+    "customizeUI.listRowHeight": 20, // shrink rows (default 22)
+    "customizeUI.moveStatusbar": true,
+    // "customizeUI.statusbarPosition": "under-panel",
+    "customizeUI.stylesheet": {
+        ":root": "--activity-bar-action-width: 38px;",
+        ".codicon-explorer-view-icon:before": "font-size: 21px",
+        ".codicon-search-view-icon:before": "font-size: 21px",
+        ".codicon-source-control-view-icon:before": "font-size: 21px",
+        ".codicon-run-view-icon:before": "font-size: 21px",
+        ".codicon-extensions-view-icon:before": "font-size: 21px",
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar .monaco-action-bar .action-label" : "-webkit-mask-size: 21px 21px !important;"
+    },
+
+    "gitlens.views.fileHistory.files.compact": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "window.menuBarVisibility": "hidden"
+    // "window.commandCenter": true
 }
