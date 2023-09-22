@@ -5,7 +5,6 @@
     "window.openFoldersInNewWindow": "on",
     "window.newWindowDimensions": "maximized",
     "window.commandCenter": true,
-    "window.zoomLevel": -0.15,
 
 
     "better-comments.tags": [
@@ -73,7 +72,8 @@
         "editor.tabSize": 4
     },
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 2
     },
 
     "turboConsoleLog.quote": "'",
@@ -93,7 +93,7 @@
     "ecsstractor_port.bem_nesting": true,
 
 
-    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "javascript.updateImportsOnFileMove.enabled": "always",
 
 
     "atlascode.bitbucket.explorer.refreshInterval": 60,
@@ -117,7 +117,7 @@
         }
     ],
     "yaml.schemas": {
-        "file:///home/f1del/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/f1del/.vscode/extensions/atlassian.atlascode-3.0.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
 
 
@@ -152,9 +152,8 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1660131371699,
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.editor.enablePreview": true, // open files temporary!!!!
+    "php-cs-fixer.lastDownload": 1695366595956,
+    "workbench.editor.untitled.hint": "hidden", // open files temporary!!!!
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -168,6 +167,29 @@
 
         // "editorIndentGuide.activeBackground": "#aaa",
         "editorIndentGuide.background": "#2c2c2c",
+
+        //terminal
+        "terminal.background":"#1f1f1f",
+        "terminal.foreground":"#ccc",
+        "terminalCursor.background":"#ccc",
+        "terminalCursor.foreground":"#ccc",
+        "terminal.ansiBlack":"#090300",
+        "terminal.ansiBlue":"#01A0E4",
+        "terminal.ansiBrightBlack":"#5C5855",
+        "terminal.ansiBrightBlue":"#01A0E4",
+        "terminal.ansiBrightCyan":"#B5E4F4",
+        "terminal.ansiBrightGreen":"#01A252",
+        "terminal.ansiBrightMagenta":"#A16A94",
+        "terminal.ansiBrightRed":"#DB2D20",
+        "terminal.ansiBrightWhite":"#F7F7F7",
+        "terminal.ansiBrightYellow":"#FDED02",
+        "terminal.ansiCyan":"#B5E4F4",
+        "terminal.ansiGreen":"#01A252",
+        "terminal.ansiMagenta":"#A16A94",
+        "terminal.ansiRed":"#DB2D20",
+        "terminal.ansiWhite":"#A5A2A2",
+        "terminal.ansiYellow":"#FDED02"
+
     },
 
     "editor.tokenColorCustomizations": {
@@ -228,6 +250,20 @@
                         "foreground": "#c09eff",
                         "fontStyle": "italic"
                     }
+                },
+                {
+                    "scope": "keyword.control.while.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "keyword.control.endwhile.php",
+                    "settings": {
+                        "foreground": "#c09eff",
+                        "fontStyle": "italic"
+                    }
                 }
 
             ]
@@ -256,16 +292,14 @@
     "search.maxResults": null,
     "gulp.autoDetect": "on",
     "atlascode.jira.lastCreateSiteAndProject": {
-        "siteId": "53d1444e-9ebb-46c2-8a29-75b88cffdcd0",
-        "projectKey": "B2B"
+        "siteId": "",
+        "projectKey": ""
     },
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "[vue]": {
         "editor.defaultFormatter": "octref.vetur"
     },
-    "workbench.productIconTheme": "fluent-icons",
     "workbench.iconTheme": "material-icon-theme",
-    "gitlens.codeLens.enabled": false,
     // "search.useIgnoreFiles": false,
 
     "wrapSelection.patterns": {
@@ -274,9 +308,6 @@
         "ta": "$t('${text}')",
         "td": "_t(${text})",
     },
-    "timeline.excludeSources": [
-        "timeline.localHistory"
-    ],
 
     "eslint.workingDirectories": [
         {"mode": "auto"}
@@ -285,8 +316,9 @@
 
     "phpcs.enable": true,
     "phpcs.ignorePatterns": ["*/vendor/*"],
-    "phpcs.standard": "PSR2",
-    "phpcs.executablePath": "/home/f1del/.config/composer/vendor/bin/phpcs",
+    "phpcs.standard": "PSR12",
+    "phpcs.autoConfigSearch": true,
+    "phpcs.executablePath": "/usr/bin/phpcs",
 
 
     "gitlens.defaultDateFormat": null,
@@ -301,22 +333,14 @@
     "editor.minimap.enabled": false,
     "gitlens.views.fileHistory.files.threshold": 5,
     "files.trimTrailingWhitespace": true,
-    "database-client.showFilter": true,
     "database-client.showQuery": true,
-    "workbench.colorTheme": "Monokai Night",
-    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    // "debug.javascript.autoAttachFilter": "onlyWithFlag",
     "material-icon-theme.activeIconPack": "vue_vuex",
-
-    //!new
-    // "git.mergeEditor": true,
-    "editor.experimental.stickyScroll.enabled": true,
 
     "workbench.editor.tabCloseButton": "off", // removes cross icon from tabs
     "editor.lineDecorationsWidth": 3,
 
     "customizeUI.activityBar": "bottom",
-    // "customizeUI.activityBar": "top",
-    "customizeUI.activityBarHideSettings": false,
     "customizeUI.listRowHeight": 20, // shrink rows (default 22)
     "customizeUI.moveStatusbar": true,
     // "customizeUI.statusbarPosition": "under-panel",
@@ -333,9 +357,216 @@
     "gitlens.views.fileHistory.files.compact": false,
     "gitlens.views.fileHistory.avatars": false,
     "workbench.view.alwaysShowHeaderActions": true,
-    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    // "diffEditor.ignoreTrimWhitespace": false,
+    "gitlens.views.commitDetails.files.layout": "list",
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "php-cs-fixer.rules": "@PSR12",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "phpcs.showSources": true,
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "settingsSync.ignoredExtensions": [
+
+    ],
+    "workbench.colorTheme": "Monokai Night",
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
-    "window.menuBarVisibility": "hidden"
-    // "window.commandCenter": true
+    "database-client.escapedAllObjectName": true,
+    "database-client.saveConnectionExpandedState": true,
+    "database-client.showTrigger": true,
+    "database-client.showEvent": true,
+    "database-client.showUser": true,
+    "database-client.resultRowHeight": "28px",
+    "editor.linkedEditing": true,
+    "editor.rename.enablePreview": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.menus": {
+        "editorGroup": {
+            "blame": true,
+            "compare": true
+        },
+        "editorGutter": {
+            "compare": true,
+            "remote": true,
+            "share": true
+        },
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "ghpr": {
+            "worktree": true
+        },
+        "scm": {
+            "graph": true
+        },
+        "scmRepositoryInline": {
+            "graph": true
+        },
+        "scmRepository": {
+            "authors": true,
+            "generateCommitMessage": true,
+            "graph": false
+        },
+        "scmGroupInline": {
+            "stash": true
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true
+        },
+        "scmItemInline": {
+            "stash": false
+        },
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true,
+            "share": true,
+            "stash": true
+        }
+    },
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    "database-client.highlightSQLBlock": true,
+    "database-client.showFilter": true,
+    "window.menuBarVisibility": "hidden",
+    "workbench.productIconTheme": "fluent-icons",
+    "activitusbar.showSourceControlCounter": true,
+    "activitusbar.views": [
+
+        {
+            "name": "explorer",
+            "codicon": "explorer-view-icon"
+        },
+        {
+            "name": "search",
+            "codicon": "search-view-icon"
+        },
+        {
+            "name": "scm",
+            "codicon": "source-control-view-icon"
+        },
+        {
+            "name": "debug",
+            "codicon": "run-view-icon"
+        },
+        {
+            "name": "extensions",
+            "codicon": "extensions-view-icon"
+        },
+        {
+            "name": "extensions-docker",
+            "codicon": "extensions-docker"
+        },
+        {
+            "name": "database",
+            "codicon": "database"
+        },
+        {
+            "codicon": "kebab-vertical"
+        },
+        // {
+        //     "name": "settings",
+        //     "codicon": "gear"
+        // },
+        // {
+        //     "codicon": "kebab-vertical"
+        // },
+    ],
+    "intelephense.stubs": [
+        "apache",
+        "bcmath",
+        "bz2",
+        "calendar",
+        "com_dotnet",
+        "Core",
+        "ctype",
+        "curl",
+        "date",
+        "dba",
+        "dom",
+        "enchant",
+        "exif",
+        "FFI",
+        "fileinfo",
+        "filter",
+        "fpm",
+        "ftp",
+        "gd",
+        "gettext",
+        "gmp",
+        "hash",
+        "iconv",
+        "imap",
+        "intl",
+        "json",
+        "ldap",
+        "libxml",
+        "mbstring",
+        "meta",
+        "mysqli",
+        "oci8",
+        "odbc",
+        "openssl",
+        "pcntl",
+        "pcre",
+        "PDO",
+        "pdo_ibm",
+        "pdo_mysql",
+        "pdo_pgsql",
+        "pdo_sqlite",
+        "pgsql",
+        "Phar",
+        "posix",
+        "pspell",
+        "random",
+        "readline",
+        "Reflection",
+        "session",
+        "shmop",
+        "SimpleXML",
+        "snmp",
+        "soap",
+        "sockets",
+        "sodium",
+        "SPL",
+        "sqlite3",
+        "standard",
+        "superglobals",
+        "sysvmsg",
+        "sysvsem",
+        "sysvshm",
+        "tidy",
+        "tokenizer",
+        "xml",
+        "xmlreader",
+        "xmlrpc",
+        "xmlwriter",
+        "xsl",
+        "Zend OPcache",
+        "zip",
+        "zlib",
+        "wordpress"
+    ],
+    "window.zoomLevel": 0.25,
+    // "terminal.integrated.defaultProfile.osx": "zsh",
+
+    // "eslint.format.enable": true,
+    // "editor.codeActionsOnSave": {
+    //   "source.fixAll.eslint": true
+    // }
+
+
 }

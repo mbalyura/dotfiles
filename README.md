@@ -24,3 +24,13 @@ https://stackoverflow.com/questions/60272595/vscode-multi-line-edit-select-on-li
 >       sudo apt-get dist-upgrade
 
 https://maxidrom.net/archives/1564
+
+- **Make Fn + F-keys work on Keychron Keyboards**
+> ### Add the option for the fn key
+>       echo options applespi fnmode=2 | sudo tee -a /etc/modprobe.d/applespi.conf
+> ### Update initramfs bootfile
+>       sudo update-initramfs -u
+> ### Reboot to test (optional)
+>       sudo reboot
+
+https://jkfran.com/keychron-keyboard-linux-secrets/

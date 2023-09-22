@@ -26,6 +26,11 @@
     "when": "inDiffEditor"
   },
   {
+    "key": "ctrl+shift+k",
+    "command": "toggle.diff.ignoreTrimWhitespace",
+    "when": "inDiffEditor"
+  },
+  {
     "key": "ctrl+alt+b",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
@@ -45,6 +50,7 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
+
 // new pane in terminal
   {
     "key": "ctrl+shift+n",
@@ -169,7 +175,12 @@
     "when": "workbench.panel.markers.view.active"
   },
   {
-    "key": "ctrl+shift+m",
+    "key": "ctrl+shift+b",
     "command": "workbench.view.extension.github-cweijan-mysql"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
   }
 ]

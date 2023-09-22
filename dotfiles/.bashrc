@@ -94,10 +94,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='exa -alghF'
-alias la='exa -A'
-alias l='exa -F'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -123,7 +119,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Aliases
+### Aliases ###
 # alias alias_name="command_to_run"
 
 alias myip='curl ipinfo.io/ip && echo ""'
@@ -132,6 +128,27 @@ alias mountgdr='google-drive-ocamlfuse ~/mygoogledrive'
 alias ch7='sudo chmod -R 777'
 alias ch6='sudo chmod -R 666'
 alias dotfiles='make backup -C ~/dev/dotfiles/'
+#alias docker-compose='docker compose'
+
+#git
+alias g='git'
+alias gc='git commit'
+alias gaa='git add .'
+alias gpl='git pull'
+alias gps='git push'
+
+#ls
+alias ll='exa -alghF'
+alias la='exa -A'
+alias l='exa -F'
+
+#npm
+alias nr='npm run'
+alias ni='npm install'
+alias nrm='npm remove'
+alias dev='if [[ $(docker-compose ls -q) != $(pwd | xargs basename) ]]; then echo "stopping old containers (if needed)..." && docker ps -q | xargs docker stop ; fi; nr start && nr wpack'
+
+### Aliases end ###
 
 ###
 export PATH="$HOME/bin:$HOME/bin/PhpStorm/bin:$PATH"
@@ -140,17 +157,16 @@ export VISUAL='micro'
 
 ###
 . ~/bin/z.sh
-alias sunrise="/home/f1del/dev/sunrise/bin/compose.sh"
-alias sunrise-up="/home/f1del/dev/sunrise/bin/compose.sh up -d"
-alias sunrise-down="/home/f1del/dev/sunrise/bin/compose.sh down"
-alias sunrise-stop="/home/f1del/dev/sunrise/bin/compose.sh stop"
-alias sunrise-restart="/home/f1del/dev/sunrise/bin/compose.sh restart"
-alias sunrise-bash="/home/f1del/dev/sunrise/bin/compose.sh run --rm app bash"
-alias sunrise-yarn-watch="/home/f1del/dev/sunrise/bin/compose.sh run --rm node yarn run watch-poll"
-alias limb="/home/f1del/dev/limb/bin/compose.sh"
-alias limb-up="/home/f1del/dev/limb/bin/compose.sh up -d"
-alias limb-down="/home/f1del/dev/limb/bin/compose.sh down"
-alias limb-stop="/home/f1del/dev/limb/bin/compose.sh stop"
-alias limb-restart="/home/f1del/dev/limb/bin/compose.sh restart"
-alias limb-bash="/home/f1del/dev/limb/bin/compose.sh run --rm app bash"
-alias limb-yarn-watch="/home/f1del/dev/limb/bin/compose.sh run --rm node yarn run watch"
+
+### ANGULAR CLI
+node_version=$(node -v)
+node_version=${node_version:1} # Remove 'v' at the beginning
+node_version=${node_version%\.*} # Remove trailing ".*".
+node_version=${node_version%\.*} # Remove trailing ".*".
+node_version=$(($node_version)) # Convert the NodeJS version number from a string to an integer.
+if [ $node_version -ge 14 ]
+then
+  # Load Angular CLI autocompletion.
+  echo $node_version
+  source <(ng completion script)
+fi
