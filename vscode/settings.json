@@ -152,7 +152,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1695366595956,
+    "php-cs-fixer.lastDownload": 1696586386093,
     "workbench.editor.untitled.hint": "hidden", // open files temporary!!!!
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
@@ -372,7 +372,6 @@
     ],
     "workbench.colorTheme": "Monokai Night",
     "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": false,
     "database-client.escapedAllObjectName": true,
     "database-client.saveConnectionExpandedState": true,
     "database-client.showTrigger": true,
@@ -560,7 +559,8 @@
         "zlib",
         "wordpress"
     ],
-    "window.zoomLevel": 0.25,
+    "window.zoomLevel": -0.27,
+    "diffEditor.renderSideBySide": false,
     // "terminal.integrated.defaultProfile.osx": "zsh",
 
     // "eslint.format.enable": true,

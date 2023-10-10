@@ -129,6 +129,8 @@ alias ch7='sudo chmod -R 777'
 alias ch6='sudo chmod -R 666'
 alias dotfiles='make backup -C ~/dev/dotfiles/'
 #alias docker-compose='docker compose'
+alias torr_up='docker-compose -f /home/f1del/Downloads/docker-transmission-openvpn/docker-compose.yml up -d && sleep 3 && firefox --new-tab http://localhost:9091/transmission/web/'
+alias torr_down='docker-compose -f /home/f1del/Downloads/docker-transmission-openvpn/docker-compose.yml down'
 
 #git
 alias g='git'
@@ -146,7 +148,7 @@ alias l='exa -F'
 alias nr='npm run'
 alias ni='npm install'
 alias nrm='npm remove'
-alias dev='if [[ $(docker-compose ls -q) != $(pwd | xargs basename) ]]; then echo "stopping old containers (if needed)..." && docker ps -q | xargs docker stop ; fi; nr start && nr wpack'
+alias dev='if [[ $(docker compose ls -q) != $(pwd | xargs basename) ]]; then echo "stopping old containers (if needed)..." && docker ps -q | xargs docker stop ; fi; nr start && nr wpack'
 
 ### Aliases end ###
 
@@ -167,6 +169,5 @@ node_version=$(($node_version)) # Convert the NodeJS version number from a strin
 if [ $node_version -ge 14 ]
 then
   # Load Angular CLI autocompletion.
-  echo $node_version
   source <(ng completion script)
 fi

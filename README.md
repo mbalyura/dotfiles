@@ -34,3 +34,21 @@ https://maxidrom.net/archives/1564
 >       sudo reboot
 
 https://jkfran.com/keychron-keyboard-linux-secrets/
+
+
+- **Bluetooth linux ploblems**
+
+### Cant set audio profile:
+
+  1. Enable MultiProfile support /etc/bluetooth/main.conf
+
+On/near line 58, you'll see #MultiProfile = off. Uncomment (or add a new line) with MultiProfile = multiple.
+
+  2. Remove the bluetooth device and re-add it.
+
+This is important. Switching to A2DP did not work for me until I dropped and re-added.
+
+
+### restart bluetooth service:
+
+>     sudo service bluetooth restart

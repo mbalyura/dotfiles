@@ -182,5 +182,13 @@
     "key": "ctrl+shift+b",
     "command": "-workbench.action.tasks.build",
     "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "ctrl+shift+alt+]",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "ctrl+shift+alt+[",
+    "command": "workbench.action.decreaseViewSize"
   }
 ]
