@@ -6,6 +6,7 @@
     "window.newWindowDimensions": "maximized",
     "window.commandCenter": true,
 
+    "window.titleBarStyle": "custom",
 
     "better-comments.tags": [
         {
@@ -58,7 +59,8 @@
 
     "files.associations": {
         "*.twig": "html",
-        "*.tpl": "php"
+        "*.tpl": "php",
+        "*.inc": "php"
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -68,7 +70,7 @@
         "editor.tabSize": 2
     },
     "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.defaultFormatter": "valeryanm.vscode-phpsab",
         "editor.tabSize": 4
     },
     "[json]": {
@@ -152,8 +154,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1696586386093,
-    "workbench.editor.untitled.hint": "hidden", // open files temporary!!!!
+    "php-cs-fixer.lastDownload": 1711094879560, // open files temporary!!!!
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -162,11 +163,16 @@
     "workbench.colorCustomizations": {
         "[Monokai Night]": {
             "sideBar.background": "#151515",
-            "editorWhitespace.foreground": "#333"
+            "editorWhitespace.foreground": "#333",
+        },
+        "[Monokai]": {
+            "editor.background": "#1f1f1f",
+            "sideBar.background": "#151515",
+            "editorWhitespace.foreground": "#333",
         },
 
         // "editorIndentGuide.activeBackground": "#aaa",
-        "editorIndentGuide.background": "#2c2c2c",
+        "editorIndentGuide.background1": "#2c2c2c",
 
         //terminal
         "terminal.background":"#1f1f1f",
@@ -193,7 +199,8 @@
     },
 
     "editor.tokenColorCustomizations": {
-        "[Monokai Night]": {
+        "[Monokai]": {
+        // "['Monokai Night']": {
             "textMateRules": [
                 {
                     "scope": "keyword.control.if.php",
@@ -314,11 +321,22 @@
     ],
 
 
-    "phpcs.enable": true,
-    "phpcs.ignorePatterns": ["*/vendor/*"],
-    "phpcs.standard": "PSR12",
-    "phpcs.autoConfigSearch": true,
-    "phpcs.executablePath": "/usr/bin/phpcs",
+    //code sniffer
+    // "phpcs.enable": true,
+    // "phpcs.enable": false,
+    // "phpcs.ignorePatterns": ["*/vendor/*"],
+    // "phpcs.standard": "WordPress",
+    // "phpcs.executablePath": "/usr/bin/phpcs",
+    // "phpsab.standard": "DMC4",
+    // "phpsab.snifferShowSources": true,
+
+    //code beautyfier
+    "phpcbf.enable": true,
+    // "phpcbf.enable": false,
+    "phpcbf.documentFormattingProvider": true,
+    "phpcbf.onsave": false,
+    "phpcbf.executablePath": "/usr/bin/phpcbf",
+    "phpcbf.standard": "WordPress",
 
 
     "gitlens.defaultDateFormat": null,
@@ -370,14 +388,11 @@
     "settingsSync.ignoredExtensions": [
 
     ],
-    "workbench.colorTheme": "Monokai Night",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "database-client.escapedAllObjectName": true,
+    "workbench.colorTheme": "Monokai",
     "database-client.saveConnectionExpandedState": true,
     "database-client.showTrigger": true,
     "database-client.showEvent": true,
     "database-client.showUser": true,
-    "database-client.resultRowHeight": "28px",
     "editor.linkedEditing": true,
     "editor.rename.enablePreview": true,
     "gitlens.codeLens.enabled": false,
@@ -438,9 +453,7 @@
         }
     },
     "gitlens.advanced.fileHistoryFollowsRenames": true,
-    "database-client.highlightSQLBlock": true,
     "database-client.showFilter": true,
-    "window.menuBarVisibility": "hidden",
     "workbench.productIconTheme": "fluent-icons",
     "activitusbar.showSourceControlCounter": true,
     "activitusbar.views": [
@@ -559,14 +572,91 @@
         "zlib",
         "wordpress"
     ],
-    "window.zoomLevel": -0.27,
-    "diffEditor.renderSideBySide": false,
-    // "terminal.integrated.defaultProfile.osx": "zsh",
+    "database-client.escapedAllObjectName": true,
+    "workbench.editor.empty.hint": "hidden",
+    "window.menuBarVisibility": "compact",
+    "workbench.activityBar.location": "top",
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "code-for-ibmi.connections": [
+        {
+            "name": "FW_QA",
+            "host": "ncsrv-apmii.ad.ncon.de",
+            "port": 25000,
+            "username": ""
+        }
+    ],
+    "code-for-ibmi.connectionSettings": [
+        {
+            "name": "FW_QA",
+            "host": "",
+            "objectFilters": [],
+            "libraryList": [],
+            "autoClearTempData": false,
+            "customVariables": [],
+            "connectionProfiles": [],
+            "commandProfiles": [],
+            "ifsShortcuts": [],
+            "autoSortIFSShortcuts": false,
+            "homeDirectory": ".",
+            "enableSQL": true,
+            "tempLibrary": "ILEDITOR",
+            "tempDir": "/tmp",
+            "currentLibrary": "",
+            "sourceASP": "",
+            "sourceFileCCSID": "*FILE",
+            "autoConvertIFSccsid": false,
+            "hideCompileErrors": [],
+            "enableSourceDates": false,
+            "sourceDateMode": "diff",
+            "sourceDateGutter": false,
+            "encodingFor5250": "default",
+            "terminalFor5250": "default",
+            "setDeviceNameFor5250": false,
+            "connectringStringFor5250": "localhost",
+            "autoSaveBeforeAction": false,
+            "showDescInLibList": false,
+            "debugCertDirectory": "/QIBM/ProdData/IBMiDebugService/bin/certs",
+            "debugPort": "8005",
+            "debugIsSecure": false,
+            "debugUpdateProductionFiles": false,
+            "debugEnableDebugTracing": false,
+            "readOnlyMode": false,
+            "quickConnect": true,
+            "defaultDeploymentMethod": ""
+        }
+    ],
+    "workbench.editor.tabActionCloseVisibility": false,
+    "database-client.resultRowHeight": "28px",
+    "database-client.reloadAfterDML": true,
+    "database-client.rightAlignNumericData": true,
+
+
+    // "editor.fontFamily": "'CaskaydiaCove Nerd Font'",
+    "editor.fontFamily": "'Fira Code'",
+    // "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "monospace",
+    "phpcs.executablePath": "/usr/bin/phpcs",
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "window.zoomLevel": -0.2551536771236883,
+    // "terminal.integrated.fontFamily": "'Fira Code'",
 
     // "eslint.format.enable": true,
     // "editor.codeActionsOnSave": {
     //   "source.fixAll.eslint": true
     // }
-
+    "terminal.integrated.mouseWheelZoom": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.integrated.fontSize": 13,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "phpcs.enable": false
 
 }

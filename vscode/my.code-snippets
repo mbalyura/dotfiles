@@ -69,4 +69,18 @@
 		],
 		"description": "Dump and die"
 	},
+
+	"css not last": {
+		"scope": "css, scss, sass",
+		"prefix": "nlc",
+		"body": "&:not(:last-child) {$1}",
+		"description": "Print :not(:last-child)"
+	},
+
+	"css not first": {
+		"scope": "css, scss, sass",
+		"prefix": "nfc",
+		"body": "&:not(:first-child) {$1}",
+		"description": "Print :not(:first-child)"
+	},
 }

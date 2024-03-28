@@ -149,6 +149,7 @@ alias nr='npm run'
 alias ni='npm install'
 alias nrm='npm remove'
 alias dev='if [[ $(docker compose ls -q) != $(pwd | xargs basename) ]]; then echo "stopping old containers (if needed)..." && docker ps -q | xargs docker stop ; fi; nr start && nr wpack'
+alias pn='pnpm'
 
 ### Aliases end ###
 
@@ -166,8 +167,13 @@ node_version=${node_version:1} # Remove 'v' at the beginning
 node_version=${node_version%\.*} # Remove trailing ".*".
 node_version=${node_version%\.*} # Remove trailing ".*".
 node_version=$(($node_version)) # Convert the NodeJS version number from a string to an integer.
-if [ $node_version -ge 14 ]
+if [ $node_version -ge 16 ]
 then
   # Load Angular CLI autocompletion.
   source <(ng completion script)
 fi
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
+# NODE MAX MEMORY
+export NODE_OPTIONS=--max-old-space-size=4096

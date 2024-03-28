@@ -17,9 +17,11 @@
 	lg = log --name-status --pretty=format:\"%C(yellow)%h %C(blue)%>(12)%ad %C(green)%<(7)%aN%C(red)%d %Creset%s\" --date=format:\"%Y-%m-%d %H:%M:%S\"
     a = "!git status --short | peco | awk '{print $2}' | xargs git add"
     df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
-    coh = "!f() { git checkout HOROSHOP-${1}; }; f"
-    col = "!f() { git checkout LAND-${1}; }; f"
     tags = for-each-ref --sort=creatordate --format '%(refname:strip=2) %09  %(creatordate:short)' refs/tags
 [safe]
 	directory = /home/f1del/edu/wordpress-test2
 	directory = /home/f1del/dev/wordpress-docker
+	directory = /home/f1del/dev/wordpress-docker/wp-content/plugins/dmc-log
+	directory = /home/f1del/dev/dmc4-env-tmp/themes/DMC4-Theme
+[url "https://git@"]
+	insteadOf = git://
