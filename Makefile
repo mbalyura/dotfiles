@@ -9,6 +9,7 @@ cp:
 	cp ~/.config/Code/User/snippets/my.code-snippets ./vscode
 	cp ~/.config/Code/User/keybindings.json ./vscode
 	cp ~/.config/Code/User/settings.json ./vscode
+	cp ~/.config/kanata/config ./kanata/config
 
 backup:
 	make cp

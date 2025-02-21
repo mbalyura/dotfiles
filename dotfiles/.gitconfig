@@ -23,5 +23,6 @@
 	directory = /home/f1del/dev/wordpress-docker
 	directory = /home/f1del/dev/wordpress-docker/wp-content/plugins/dmc-log
 	directory = /home/f1del/dev/dmc4-env-tmp/themes/DMC4-Theme
+	directory = /home/f1del/Downloads/docker-transmission-openvpn/vpn-configs-contrib
 [url "https://git@"]
 	insteadOf = git://

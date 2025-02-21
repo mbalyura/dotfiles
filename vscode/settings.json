@@ -63,14 +63,14 @@
         "*.inc": "php"
     },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features",
         "editor.tabSize": 2
     },
     "[php]": {
-        "editor.defaultFormatter": "valeryanm.vscode-phpsab",
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
         "editor.tabSize": 4
     },
     "[json]": {
@@ -154,7 +154,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1711094879560, // open files temporary!!!!
+    "php-cs-fixer.lastDownload": 1739975788816, // open files temporary!!!!
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -314,21 +314,18 @@
         "tt": "this.$t(${text})",
         "ta": "$t('${text}')",
         "td": "_t(${text})",
+        "pll": "<?= pll__( '${text}' ) ?>",
     },
 
     "eslint.workingDirectories": [
         {"mode": "auto"}
     ],
-
-
-    //code sniffer
-    // "phpcs.enable": true,
-    // "phpcs.enable": false,
-    // "phpcs.ignorePatterns": ["*/vendor/*"],
-    // "phpcs.standard": "WordPress",
-    // "phpcs.executablePath": "/usr/bin/phpcs",
-    // "phpsab.standard": "DMC4",
-    // "phpsab.snifferShowSources": true,
+    "phpcs.ignorePatterns": ["*/vendor/*"],
+    // "phpcs.standard": "PEAR, PSR2, PSR12",
+    // "phpcs.standard": "PSR2",
+    "phpcs.executablePath": "/usr/bin/phpcs",
+    "phpcs.showSources": true,
+    // "phpcs.": true,
 
     //code beautyfier
     "phpcbf.enable": true,
@@ -336,7 +333,8 @@
     "phpcbf.documentFormattingProvider": true,
     "phpcbf.onsave": false,
     "phpcbf.executablePath": "/usr/bin/phpcbf",
-    "phpcbf.standard": "WordPress",
+    "phpcbf.standard": "PSR2",
+    // "phpcbf.standard": "WordPress",
 
 
     "gitlens.defaultDateFormat": null,
@@ -348,7 +346,6 @@
     "gitlens.views.commits.pullRequests.showForBranches": false,
     "gitlens.views.commits.pullRequests.enabled": false,
     "gitlens.views.commits.files.layout": "list",
-    "editor.minimap.enabled": false,
     "gitlens.views.fileHistory.files.threshold": 5,
     "files.trimTrailingWhitespace": true,
     "database-client.showQuery": true,
@@ -382,17 +379,12 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "phpcs.showSources": true,
     "explorer.confirmDelete": false,
     "liveServer.settings.donotVerifyTags": true,
     "settingsSync.ignoredExtensions": [
 
     ],
     "workbench.colorTheme": "Monokai",
-    "database-client.saveConnectionExpandedState": true,
-    "database-client.showTrigger": true,
-    "database-client.showEvent": true,
-    "database-client.showUser": true,
     "editor.linkedEditing": true,
     "editor.rename.enablePreview": true,
     "gitlens.codeLens.enabled": false,
@@ -454,7 +446,6 @@
     },
     "gitlens.advanced.fileHistoryFollowsRenames": true,
     "database-client.showFilter": true,
-    "workbench.productIconTheme": "fluent-icons",
     "activitusbar.showSourceControlCounter": true,
     "activitusbar.views": [
 
@@ -497,82 +488,6 @@
         //     "codicon": "kebab-vertical"
         // },
     ],
-    "intelephense.stubs": [
-        "apache",
-        "bcmath",
-        "bz2",
-        "calendar",
-        "com_dotnet",
-        "Core",
-        "ctype",
-        "curl",
-        "date",
-        "dba",
-        "dom",
-        "enchant",
-        "exif",
-        "FFI",
-        "fileinfo",
-        "filter",
-        "fpm",
-        "ftp",
-        "gd",
-        "gettext",
-        "gmp",
-        "hash",
-        "iconv",
-        "imap",
-        "intl",
-        "json",
-        "ldap",
-        "libxml",
-        "mbstring",
-        "meta",
-        "mysqli",
-        "oci8",
-        "odbc",
-        "openssl",
-        "pcntl",
-        "pcre",
-        "PDO",
-        "pdo_ibm",
-        "pdo_mysql",
-        "pdo_pgsql",
-        "pdo_sqlite",
-        "pgsql",
-        "Phar",
-        "posix",
-        "pspell",
-        "random",
-        "readline",
-        "Reflection",
-        "session",
-        "shmop",
-        "SimpleXML",
-        "snmp",
-        "soap",
-        "sockets",
-        "sodium",
-        "SPL",
-        "sqlite3",
-        "standard",
-        "superglobals",
-        "sysvmsg",
-        "sysvsem",
-        "sysvshm",
-        "tidy",
-        "tokenizer",
-        "xml",
-        "xmlreader",
-        "xmlrpc",
-        "xmlwriter",
-        "xsl",
-        "Zend OPcache",
-        "zip",
-        "zlib",
-        "wordpress"
-    ],
-    "database-client.escapedAllObjectName": true,
     "workbench.editor.empty.hint": "hidden",
     "window.menuBarVisibility": "compact",
     "workbench.activityBar.location": "top",
@@ -580,7 +495,7 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "code-for-ibmi.connections": [
         {
@@ -632,7 +547,6 @@
     ],
     "workbench.editor.tabActionCloseVisibility": false,
     "database-client.resultRowHeight": "28px",
-    "database-client.reloadAfterDML": true,
     "database-client.rightAlignNumericData": true,
 
 
@@ -641,9 +555,8 @@
     // "editor.fontFamily": "Fira Code Retina",
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "monospace",
-    "phpcs.executablePath": "/usr/bin/phpcs",
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "window.zoomLevel": -0.2551536771236883,
+    "window.zoomLevel": 0.2676050217395348,
     // "terminal.integrated.fontFamily": "'Fira Code'",
 
     // "eslint.format.enable": true,
@@ -654,9 +567,50 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "terminal.integrated.fontSize": 13,
-    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
-    "phpcs.enable": false
+    "calva.paredit.defaultKeyMap": "original",
+    "calva.prettyPrintingOptions": {
+        "printEngine": "pprint",
+        "enabled": true,
+        "width": 120,
+        "maxLength": 50
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.launchpad.indicator.enabled": false,
+    "editor.minimap.enabled": false,
+    "window.customTitleBarVisibility": "auto",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "debug.showVariableTypes": true,
+    "database-client.capitalizeKeywordsWhenFormatting": true,
+    "database-client.splitEditorWhenQuery": false,
+    "database-client.highlightSQLBlock": true,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "database-client.saveConnectionExpandedState": true,
+    "database-client.terminalLocation": "Panel",
+    // "editor.experimentalInlineEdit.fontFamily": "'Fira Code'",
+    "editor.inlayHints.fontFamily": "'Fira Code'",
+    "editor.inlineSuggest.fontFamily": "'Fira Code'",
+    "intelephense.telemetry.enabled": false,
+    "intelephense.environment.includePaths": [
+        "/home/f1del/dev/A&G/DMC3/"
+    ],
+    "intelephense.environment.phpVersion": "7.4.2",
+    "phpcs.enable": false,
+    "workbench.productIconTheme": "fluent-icons",
+    "codeium.enableConfig": {
+        "*": true,
+        "properties": true,
 
+    },
+    "git.confirmSync": false,
+    "database-client.showUser": true,
+    // "workbench.panel.showLabels": false,
 }

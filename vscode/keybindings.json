@@ -51,6 +51,17 @@
     "when": "terminalFocus"
   },
 
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+
 // new pane in terminal
   {
     "key": "ctrl+shift+n",
@@ -214,5 +225,30 @@
       "key": "f4",
       "command": "git.openFile",
       "when": "isInDiffEditor"
-  }
+  },
+  {
+    "key": "f4",
+    "command": "gitlens.openWorkingFile",
+    "when": "gitlens:enabled && !isInDiffEditor && resourceScheme == 'git'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  // {
+  //   "key": "ctrl+d",
+  //   "command": "-editor.action.addSelectionToNextFindMatch",
+  //   "when": "editorFocus"
+  // },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpen",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+
 ]
