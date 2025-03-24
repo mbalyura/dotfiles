@@ -154,7 +154,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1739975788816, // open files temporary!!!!
+    "php-cs-fixer.lastDownload": 1741592823390, // open files temporary!!!!
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -575,7 +575,7 @@
         "width": 120,
         "maxLength": 50
     },
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -612,5 +612,14 @@
     },
     "git.confirmSync": false,
     "database-client.showUser": true,
-    // "workbench.panel.showLabels": false,
+    "chat.commandCenter.enabled": false,
+
+    "terminal.integrated.suggest.quickSuggestions": {
+        "commands": "on",
+        "arguments": "on",
+        "unknown": "off"
+    },
+    "window.confirmBeforeClose": "keyboardOnly",
+    "terminal.integrated.fontSize": 15,
+    // "keyboard.dispatch": "colemak"
 }

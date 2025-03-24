@@ -5,7 +5,7 @@ cp:
 	cp ~/.gitignore ./dotfiles
 	cp ~/tilix.json ./dotfiles
 	cp ~/.bashrc ./dotfiles
-
+	cp ~/.tmux.conf ./dotfiles
 	cp ~/.config/Code/User/snippets/my.code-snippets ./vscode
 	cp ~/.config/Code/User/keybindings.json ./vscode
 	cp ~/.config/Code/User/settings.json ./vscode
