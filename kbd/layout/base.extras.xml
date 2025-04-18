@@ -1,0 +1,6 @@
+<variant>
+  <configItem popularity="exotic">
+	<name>colemak_hard</name>
+	<description>Russian for Colemak keyboard (plus Ukrainian and Belarusian letters)</description>
+  </configItem>
+</variant>
