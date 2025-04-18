@@ -203,9 +203,9 @@
     "command": "workbench.action.decreaseViewSize"
   },
   {
-    "key": "ctrl+shift+x",
-    "command": "-workbench.view.extensions",
-    "when": "viewContainer.workbench.view.extensions.enabled"
+    "key": "ctrl+shift+r",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
     "key": "ctrl+shift+x",
@@ -236,19 +236,34 @@
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
   // {
   //   "key": "ctrl+d",
   //   "command": "-editor.action.addSelectionToNextFindMatch",
   //   "when": "editorFocus"
   // },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.quickOpen",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
-  },
+  // {
+  //   "key": "ctrl+e",
+  //   "command": "workbench.action.quickOpen",
+  //   "when": "!terminalFocus"
+  // },
+  // {
+  //   "key": "ctrl+e",
+  //   "command": "-workbench.action.quickOpen"
+  // },
 
 ]
