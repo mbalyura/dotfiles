@@ -1,0 +1,67 @@
+;; defsrc is still necessary
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  a r s t n e i o
+)
+
+(defvar
+  tap-time 150
+  hold-time 200
+
+  left-hand-keys (
+    q w f p g
+    a r s t d
+    z x c v b
+  )
+  right-hand-keys (
+    j l u y ;
+    h n e i o
+    k m , . /
+  )
+)
+
+(deflayer base
+  @a @r @s @t @n @e @i @o
+)
+
+(deflayer nomods
+  a r s t n e i o
+)
+
+(deffakekeys
+  to-base (layer-switch base)
+)
+
+;; https://github.com/jtroo/kanata/blob/42d6065b2fe7ac5d9e8ca2cac57e7643d419566b/cfg_samples/home-row-mod-basic.kbd
+
+(defalias
+  tap (multi
+    (layer-switch nomods)
+    (on-idle-fakekey to-base tap 20)
+  )
+
+  a (tap-hold-release-keys $tap-time $hold-time (multi a @tap) lmet $left-hand-keys)
+  r (tap-hold-release-keys $tap-time $hold-time (multi r @tap) lalt $left-hand-keys)
+  s (tap-hold-release-keys $tap-time $hold-time (multi s @tap) lctl $left-hand-keys)
+  t (tap-hold-release-keys $tap-time $hold-time (multi t @tap) lsft $left-hand-keys)
+  n (tap-hold-release-keys $tap-time $hold-time (multi n @tap) rsft $right-hand-keys)
+  e (tap-hold-release-keys $tap-time $hold-time (multi e @tap) rctl $right-hand-keys)
+  i (tap-hold-release-keys $tap-time $hold-time (multi i @tap) ralt $right-hand-keys)
+  o (tap-hold-release-keys $tap-time $hold-time (multi o @tap) rmet $right-hand-keys)
+)
+
+;; https://github.com/dreamsofcode-io/home-row-mods/blob/main/kanata/linux/kanata.kbd
+
+;; (defalias
+;;   a (multi f24 (tap-hold $tap-time $hold-time a lmet))
+;;   r (multi f24 (tap-hold $tap-time $hold-time r lalt))
+;;   s (multi f24 (tap-hold $tap-time $hold-time s lctl))
+;;   t (multi f24 (tap-hold $tap-time $hold-time t lsft))
+;;   n (multi f24 (tap-hold $tap-time $hold-time n rsft))
+;;   e (multi f24 (tap-hold $tap-time $hold-time e rctl))
+;;   i (multi f24 (tap-hold $tap-time $hold-time i ralt))
+;;   o (multi f24 (tap-hold $tap-time $hold-time o rmet))
+;; )
