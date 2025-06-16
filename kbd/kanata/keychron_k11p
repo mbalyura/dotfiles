@@ -9,8 +9,8 @@
 )
 
 (defvar ;; declare commonly-used values. prefix with $ to call them. They are refered with `$<var name>`
-  tap-time 175
-  hold-time 250
+  tap-time 200
+  hold-time 275
 
   left-hand-keys (
     q w f p g

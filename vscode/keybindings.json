@@ -178,7 +178,7 @@
   },
   {
     "key": "ctrl+shift+d",
-    "command": "workbench.view.extension.dockerView"
+    "command": "workbench.view.extension.containersView"
   },
   {
     "key": "ctrl+shift+m",

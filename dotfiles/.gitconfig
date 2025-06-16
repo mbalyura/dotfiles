@@ -20,3 +20,6 @@
 	tags = for-each-ref --sort=creatordate --format '%(refname:strip=2) %09  %(creatordate:short)' refs/tags
 [url "https://git@"]
 	insteadOf = git://
+[safe]
+	directory = /home/f1del/dev/wordpress-docker/plugins/dmc-social-media
+	directory = /home/f1del/dev/wordpress-docker/plugins/dmc-forms

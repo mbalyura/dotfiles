@@ -154,7 +154,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1744645548113, // open files temporary!!!!
+    "php-cs-fixer.lastDownload": 1749724656843, // open files temporary!!!!
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -495,7 +495,7 @@
         "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "code-for-ibmi.connections": [
         {
@@ -556,7 +556,7 @@
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "monospace",
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "window.zoomLevel": 0.02,
+    "window.zoomLevel": -0.02,
     // "terminal.integrated.fontFamily": "'Fira Code'",
 
     // "eslint.format.enable": true,
@@ -586,21 +586,16 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "debug.showVariableTypes": true,
-    "database-client.capitalizeKeywordsWhenFormatting": true,
-    "database-client.splitEditorWhenQuery": false,
-    "database-client.highlightSQLBlock": true,
     "git.openRepositoryInParentFolders": "never",
     "editor.tabCompletion": "on",
     "diffEditor.codeLens": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "database-client.saveConnectionExpandedState": true,
-    "database-client.terminalLocation": "Panel",
     // "editor.experimentalInlineEdit.fontFamily": "'Fira Code'",
     "editor.inlayHints.fontFamily": "'Fira Code'",
     "editor.inlineSuggest.fontFamily": "'Fira Code'",
     "intelephense.telemetry.enabled": false,
     "intelephense.environment.includePaths": [
-        "/home/f1del/dev/A&G/DMC3/"
+        "/home/f1del/dev/A&G/DMC3"
     ],
     "intelephense.environment.phpVersion": "7.4.2",
     "phpcs.enable": false,
@@ -611,7 +606,6 @@
     },
     "git.confirmSync": false,
     "database-client.showUser": true,
-    "chat.commandCenter.enabled": false,
 
     "terminal.integrated.suggest.quickSuggestions": {
         "commands": "on",
@@ -619,5 +613,88 @@
         "unknown": "off"
     },
     "window.confirmBeforeClose": "keyboardOnly",
+    "intelephense.stubs": [
+        "apache",
+        "bcmath",
+        "bz2",
+        "calendar",
+        "com_dotnet",
+        "Core",
+        "ctype",
+        "curl",
+        "date",
+        "dba",
+        "dom",
+        "enchant",
+        "exif",
+        "FFI",
+        "fileinfo",
+        "filter",
+        "fpm",
+        "ftp",
+        "gd",
+        "gettext",
+        "gmp",
+        "hash",
+        "iconv",
+        "imap",
+        "intl",
+        "json",
+        "ldap",
+        "libxml",
+        "mbstring",
+        "meta",
+        "mysqli",
+        "oci8",
+        "odbc",
+        "openssl",
+        "pcntl",
+        "pcre",
+        "PDO",
+        "pdo_ibm",
+        "pdo_mysql",
+        "pdo_pgsql",
+        "pdo_sqlite",
+        "pgsql",
+        "Phar",
+        "posix",
+        "pspell",
+        "random",
+        "readline",
+        "Reflection",
+        "session",
+        "shmop",
+        "SimpleXML",
+        "snmp",
+        "soap",
+        "sockets",
+        "sodium",
+        "SPL",
+        "sqlite3",
+        "standard",
+        "superglobals",
+        "sysvmsg",
+        "sysvsem",
+        "sysvshm",
+        "tidy",
+        "tokenizer",
+        "xml",
+        "xmlreader",
+        "xmlrpc",
+        "xmlwriter",
+        "xsl",
+        "Zend OPcache",
+        "zip",
+        "zlib",
+        "wordpress"
+    ],
+    "codeium.disableSupercomplete": false,
+    "database-client.completionTriggerKey": [
+        " ",
+        "@",
+        "."
+    ],
+    "database-client.splitEditorWhenQuery": false,
+    "docker.extension.enableComposeLanguageServer": false,
     // "keyboard.dispatch": "colemak"
 }
