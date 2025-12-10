@@ -2,12 +2,17 @@
     "files.autoSave": "onFocusChange",
     "update.mode": "start",
 
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true
+    },
+
     "window.openFoldersInNewWindow": "on",
     "window.newWindowDimensions": "maximized",
     "window.commandCenter": true,
-
     "window.titleBarStyle": "custom",
-
     "better-comments.tags": [
         {
             "tag": "!",
@@ -41,14 +46,11 @@
             "backgroundColor": "transparent"
         }
     ],
-
     //old sync
     // "sync.gist": "fa6c74d096602446b01bf9edffd2f417",
     // "sync.autoUpload": true,
-
     "files.defaultLanguage": "JavaScript",
     "files.trimFinalNewlines": true,
-
     "prettier.proseWrap": "never",
     "prettier.singleQuote": true,
     "togglequotes.chars": [
@@ -56,7 +58,6 @@
         "\"",
         "'"
     ],
-
     "files.associations": {
         "*.twig": "html",
         "*.tpl": "php",
@@ -77,7 +78,6 @@
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.tabSize": 2
     },
-
     "turboConsoleLog.quote": "'",
     "turboConsoleLog.addSemicolonInTheEnd": true,
     "turboConsoleLog.insertEnclosingClass": false,
@@ -90,14 +90,9 @@
         "php": "echo '$eSEL : '; var_dump($SEL);",
         "default": "console.log('$eSEL', $SEL)"
     },
-
     "liveServer.settings.donotShowInfoMsg": true,
     "ecsstractor_port.bem_nesting": true,
-
-
     "javascript.updateImportsOnFileMove.enabled": "always",
-
-
     "atlascode.bitbucket.explorer.refreshInterval": 60,
     "atlascode.bitbucket.pipelines.explorerEnabled": false,
     "atlascode.jira.enabled": true,
@@ -121,12 +116,9 @@
     "yaml.schemas": {
         "file:///home/f1del/.vscode/extensions/atlassian.atlascode-3.0.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
-
-
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
     "workbench.list.smoothScrolling": true,
-
     "editor.tabSize": 2,
     "editor.autoClosingDelete": "always",
     "editor.find.addExtraSpaceOnTop": false,
@@ -134,21 +126,15 @@
     "editor.smoothScrolling": true,
     "editor.wordSeparators": "`~!@#%^&*()-_=+[{]}\\|;:'\",.<>/?",
     "editor.renderWhitespace": "all",
-
     "code-eol.newlineCharacter": "¬",
-    "code-eol.returnCharacter" : "¤",
-    "code-eol.crlfCharacter"   : "¤¬",
-
+    "code-eol.returnCharacter": "¤",
+    "code-eol.crlfCharacter": "¤¬",
     "editor.renderControlCharacters": true,
     "editor.suggest.preview": true,
     "editor.fastScrollSensitivity": 4,
-
     "editor.multiCursorModifier": "alt",
-
-
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": true,
-
     "git.terminalAuthentication": false,
     "git.autofetch": "all",
     "gitlens.views.branches.branches.layout": "list",
@@ -158,8 +144,6 @@
 
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
-
-
     "workbench.colorCustomizations": {
         "[Monokai Night]": {
             "sideBar.background": "#151515",
@@ -170,37 +154,33 @@
             "sideBar.background": "#151515",
             "editorWhitespace.foreground": "#333",
         },
-
         // "editorIndentGuide.activeBackground": "#aaa",
         "editorIndentGuide.background1": "#2c2c2c",
-
         //terminal
-        "terminal.background":"#1f1f1f",
-        "terminal.foreground":"#ccc",
-        "terminalCursor.background":"#ccc",
-        "terminalCursor.foreground":"#ccc",
-        "terminal.ansiBlack":"#090300",
-        "terminal.ansiBlue":"#01A0E4",
-        "terminal.ansiBrightBlack":"#5C5855",
-        "terminal.ansiBrightBlue":"#01A0E4",
-        "terminal.ansiBrightCyan":"#B5E4F4",
-        "terminal.ansiBrightGreen":"#01A252",
-        "terminal.ansiBrightMagenta":"#A16A94",
-        "terminal.ansiBrightRed":"#DB2D20",
-        "terminal.ansiBrightWhite":"#F7F7F7",
-        "terminal.ansiBrightYellow":"#FDED02",
-        "terminal.ansiCyan":"#B5E4F4",
-        "terminal.ansiGreen":"#01A252",
-        "terminal.ansiMagenta":"#A16A94",
-        "terminal.ansiRed":"#DB2D20",
-        "terminal.ansiWhite":"#A5A2A2",
-        "terminal.ansiYellow":"#FDED02"
-
+        "terminal.background": "#1f1f1f",
+        "terminal.foreground": "#ccc",
+        "terminalCursor.background": "#ccc",
+        "terminalCursor.foreground": "#ccc",
+        "terminal.ansiBlack": "#090300",
+        "terminal.ansiBlue": "#01A0E4",
+        "terminal.ansiBrightBlack": "#5C5855",
+        "terminal.ansiBrightBlue": "#01A0E4",
+        "terminal.ansiBrightCyan": "#B5E4F4",
+        "terminal.ansiBrightGreen": "#01A252",
+        "terminal.ansiBrightMagenta": "#A16A94",
+        "terminal.ansiBrightRed": "#DB2D20",
+        "terminal.ansiBrightWhite": "#F7F7F7",
+        "terminal.ansiBrightYellow": "#FDED02",
+        "terminal.ansiCyan": "#B5E4F4",
+        "terminal.ansiGreen": "#01A252",
+        "terminal.ansiMagenta": "#A16A94",
+        "terminal.ansiRed": "#DB2D20",
+        "terminal.ansiWhite": "#A5A2A2",
+        "terminal.ansiYellow": "#FDED02"
     },
-
     "editor.tokenColorCustomizations": {
         "[Monokai]": {
-        // "['Monokai Night']": {
+            // "['Monokai Night']": {
             "textMateRules": [
                 {
                     "scope": "keyword.control.if.php",
@@ -272,22 +252,18 @@
                         "fontStyle": "italic"
                     }
                 }
-
             ]
         }
     },
-
     //brackets
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active", //true, false, active
     "editor.guides.bracketPairsHorizontal": "active",
     // "editor.guides.indentation": true,
     // "editor.guides.highlightActiveIndentation": true,
-
     // "editor.minimap.size": "fill",
     // "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 50,
-
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "tabnine.experimentalAutoImports": true,
@@ -295,7 +271,6 @@
     "ecsstractor_port.brackets_newline_after": false,
     "ecsstractor_port.indentation": " ",
     "customWindowZoom.zoomLevelChangeValue": 0.05,
-
     "search.maxResults": null,
     "gulp.autoDetect": "on",
     "atlascode.jira.lastCreateSiteAndProject": {
@@ -308,7 +283,6 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     // "search.useIgnoreFiles": false,
-
     "wrapSelection.patterns": {
         "t": "{{ $t('${text}') }}",
         "tt": "this.$t(${text})",
@@ -316,17 +290,19 @@
         "td": "_t(${text})",
         "pll": "<?= pll__( '${text}' ) ?>",
     },
-
     "eslint.workingDirectories": [
-        {"mode": "auto"}
+        {
+            "mode": "auto"
+        }
     ],
-    "phpcs.ignorePatterns": ["*/vendor/*"],
+    "phpcs.ignorePatterns": [
+        "*/vendor/*"
+    ],
     // "phpcs.standard": "PEAR, PSR2, PSR12",
     // "phpcs.standard": "PSR2",
     "phpcs.executablePath": "/usr/bin/phpcs",
     "phpcs.showSources": true,
     // "phpcs.": true,
-
     //code beautyfier
     "phpcbf.enable": true,
     // "phpcbf.enable": false,
@@ -335,8 +311,6 @@
     "phpcbf.executablePath": "/usr/bin/phpcbf",
     "phpcbf.standard": "PSR2",
     // "phpcbf.standard": "WordPress",
-
-
     "gitlens.defaultDateFormat": null,
     "gitlens.defaultDateShortFormat": null,
     "gitlens.defaultTimeFormat": null,
@@ -351,10 +325,8 @@
     "database-client.showQuery": true,
     // "debug.javascript.autoAttachFilter": "onlyWithFlag",
     "material-icon-theme.activeIconPack": "vue_vuex",
-
     "workbench.editor.tabCloseButton": "off", // removes cross icon from tabs
     "editor.lineDecorationsWidth": 3,
-
     "customizeUI.activityBar": "bottom",
     "customizeUI.listRowHeight": 20, // shrink rows (default 22)
     "customizeUI.moveStatusbar": true,
@@ -366,9 +338,8 @@
         ".codicon-source-control-view-icon:before": "font-size: 21px",
         ".codicon-run-view-icon:before": "font-size: 21px",
         ".codicon-extensions-view-icon:before": "font-size: 21px",
-        "body.activity-bar-at-bottom .monaco-workbench .activitybar .monaco-action-bar .action-label" : "-webkit-mask-size: 21px 21px !important;"
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar .monaco-action-bar .action-label": "-webkit-mask-size: 21px 21px !important;"
     },
-
     "gitlens.views.fileHistory.files.compact": false,
     "gitlens.views.fileHistory.avatars": false,
     "workbench.view.alwaysShowHeaderActions": true,
@@ -381,9 +352,7 @@
     },
     "explorer.confirmDelete": false,
     "liveServer.settings.donotVerifyTags": true,
-    "settingsSync.ignoredExtensions": [
-
-    ],
+    "settingsSync.ignoredExtensions": [],
     "workbench.colorTheme": "Monokai",
     "editor.linkedEditing": true,
     "editor.rename.enablePreview": true,
@@ -448,7 +417,6 @@
     "database-client.showFilter": true,
     "activitusbar.showSourceControlCounter": true,
     "activitusbar.views": [
-
         {
             "name": "explorer",
             "codicon": "explorer-view-icon"
@@ -548,8 +516,6 @@
     "workbench.editor.tabActionCloseVisibility": false,
     "database-client.resultRowHeight": "28px",
     "database-client.rightAlignNumericData": true,
-
-
     // "editor.fontFamily": "'CaskaydiaCove Nerd Font'",
     "editor.fontFamily": "'Fira Code'",
     // "editor.fontFamily": "Fira Code Retina",
@@ -558,7 +524,6 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "window.zoomLevel": -0.02,
     // "terminal.integrated.fontFamily": "'Fira Code'",
-
     // "eslint.format.enable": true,
     // "editor.codeActionsOnSave": {
     //   "source.fixAll.eslint": true
@@ -575,7 +540,7 @@
         "width": 120,
         "maxLength": 50
     },
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -606,7 +571,6 @@
     },
     "git.confirmSync": false,
     "database-client.showUser": true,
-
     "terminal.integrated.suggest.quickSuggestions": {
         "commands": "on",
         "arguments": "on",
@@ -696,5 +660,29 @@
     ],
     "database-client.splitEditorWhenQuery": false,
     "docker.extension.enableComposeLanguageServer": false,
+    "editor.accessibilitySupport": "off",
+    "powermode.enabled": true,
+    "powermode.shake.enabled": false,
+    "powermode.combo.counterEnabled": "hide",
+    "powermode.combo.location": "off",
+    "editor.scrollOnMiddleClick": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "files.exclude": {
+        "**/.git": false
+    },
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     // "keyboard.dispatch": "colemak"
 }

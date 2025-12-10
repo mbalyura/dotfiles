@@ -140,6 +140,12 @@ alias gc='git commit'
 alias gaa='git add .'
 alias gpl='git pull'
 alias gps='git push'
+alias gst='git status'
+alias glg='git lg'
+alias gl='git l'
+gcm() {
+  git commit -m "$*"
+}
 
 #ls
 alias ll='exa -alghF'
@@ -179,3 +185,5 @@ fi
 [ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
 # NODE MAX MEMORY
 export NODE_OPTIONS=--max-old-space-size=4096
+
+export PATH=~/.local/bin:"$PATH"

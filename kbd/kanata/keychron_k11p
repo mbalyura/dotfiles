@@ -61,7 +61,7 @@
     (layer-switch nomods)
     (on-idle-fakekey to-base tap 20)
   )
-
+;; https://github.com/jtroo/kanata/blob/42d6065b2fe7ac5d9e8ca2cac57e7643d419566b/docs/config.adoc#L1937
 ;; (tap-hold-release-keys $tap-timeout $hold-timeout $tap-action $hold-action $tap-keys)
   a (tap-hold-release-keys $tt $ht (multi a @tap) lmet $lhk)
   r (tap-hold-release-keys $tt $ht (multi r @tap) lalt $lhk)
