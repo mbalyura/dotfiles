@@ -1,4 +1,3 @@
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -139,6 +138,7 @@ alias g='git'
 alias gc='git commit'
 alias gaa='git add .'
 alias gpl='git pull'
+alias gpr='git pull --rebase'
 alias gps='git push'
 alias gst='git status'
 alias glg='git lg'
@@ -175,8 +175,7 @@ node_version=${node_version:1} # Remove 'v' at the beginning
 node_version=${node_version%\.*} # Remove trailing ".*".
 node_version=${node_version%\.*} # Remove trailing ".*".
 node_version=$(($node_version)) # Convert the NodeJS version number from a string to an integer.
-if [ $node_version -ge 16 ]
-then
+if [ $node_version -ge 16 ] && command -v ng >/dev/null 2>&1; then
   # Load Angular CLI autocompletion.
   source <(ng completion script)
 fi
@@ -187,3 +186,7 @@ fi
 export NODE_OPTIONS=--max-old-space-size=4096
 
 export PATH=~/.local/bin:"$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/f1del/.lmstudio/bin"
+# End of LM Studio CLI section

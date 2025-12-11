@@ -251,6 +251,10 @@
     "command": "-workbench.action.terminal.sendSequence",
     "when": "terminalFocus"
   },
+  {
+    "key": "ctrl+shift+alt+b",
+    "command": "git.checkout"
+  },
   // {
   //   "key": "ctrl+d",
   //   "command": "-editor.action.addSelectionToNextFindMatch",

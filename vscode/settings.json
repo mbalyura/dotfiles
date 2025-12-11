@@ -140,8 +140,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1749724656843, // open files temporary!!!!
-
+    "php-cs-fixer.lastDownload": 1765360633814, // open files temporary!!!!
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
     "workbench.colorCustomizations": {
@@ -356,7 +355,6 @@
     "workbench.colorTheme": "Monokai",
     "editor.linkedEditing": true,
     "editor.rename.enablePreview": true,
-    "gitlens.codeLens.enabled": false,
     "gitlens.menus": {
         "editorGroup": {
             "blame": true,
@@ -522,7 +520,7 @@
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "monospace",
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "window.zoomLevel": -0.02,
+    "window.zoomLevel": 0,
     // "terminal.integrated.fontFamily": "'Fira Code'",
     // "eslint.format.enable": true,
     // "editor.codeActionsOnSave": {
@@ -540,7 +538,7 @@
         "width": 120,
         "maxLength": 50
     },
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -560,7 +558,7 @@
     "editor.inlineSuggest.fontFamily": "'Fira Code'",
     "intelephense.telemetry.enabled": false,
     "intelephense.environment.includePaths": [
-        "/home/f1del/dev/A&G/DMC3"
+        "/home/f1del/dev/AG/DMC3"
     ],
     "intelephense.environment.phpVersion": "7.4.2",
     "phpcs.enable": false,
@@ -670,6 +668,10 @@
     "files.exclude": {
         "**/.git": false
     },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.gitAuthentication": false,
+    "gitlens.statusBar.enabled": false,
+    "database-client.capitalizeKeywordsWhenFormatting": true,
     "[dockercompose]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
@@ -684,5 +686,6 @@
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
+    "workbench.editor.enablePreview": false,
     // "keyboard.dispatch": "colemak"
 }
