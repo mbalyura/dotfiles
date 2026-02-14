@@ -1,0 +1,59 @@
+<layout>
+  <configItem>
+    <name>ru_custom</name>
+    <shortDescription>ru</shortDescription>
+    <description>Russian (custom)</description>
+    <languageList>
+      <iso639Id>rus</iso639Id>
+    </languageList>
+  </configItem>
+
+  <variantList>
+    <variant>
+      <configItem>
+        <name>ru_colemak_hard</name>
+        <shortDescription>ru</shortDescription>
+        <description>Russian Colemak Hard</description>
+      </configItem>
+    </variant>
+
+    <variant>
+      <configItem>
+        <name>ru_universal</name>
+        <shortDescription>ru</shortDescription>
+        <description>Russian Universal</description>
+      </configItem>
+    </variant>
+
+    <variant>
+      <configItem>
+        <name>ru_colemak_hard_universal</name>
+        <shortDescription>ru</shortDescription>
+        <description>Russian Colemak Hard Universal</description>
+      </configItem>
+    </variant>
+  </variantList>
+</layout>
+
+<!-- ///////////////////// -->
+
+<layout>
+  <configItem>
+    <name>en_custom</name>
+    <shortDescription>en</shortDescription>
+    <description>English (custom)</description>
+    <languageList>
+      <iso639Id>en</iso639Id>
+    </languageList>
+  </configItem>
+
+  <variantList>
+    <variant>
+      <configItem>
+        <name>en_universal</name>
+        <shortDescription>en</shortDescription>
+        <description>English Universal</description>
+      </configItem>
+    </variant>
+  </variantList>
+</layout>

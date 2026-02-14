@@ -1,0 +1,37 @@
+default partial alphanumeric_keys
+xkb_symbols "en_universal" {
+
+    include "us(basic)"
+    name[Group1]= "English Universal";
+
+    key <AE01> { [ 1, exclam,  onesuperior, exclamdown ] };
+    key <AE02> { [ 2, at,  twosuperior, onehalf ] };
+    key <AE03> { [ 3, numbersign,  threesuperior, onethird ] };
+    key <AE04> { [ 4, dollar ] };
+    key <AE05> { [ 5, percent,  permille ] };
+    key <AE06> { [ 6, asciicircum,  U0302 ] };
+    key <AE07> { [ 7, question,  questiondown ] };
+    key <AE08> { [ 8, asterisk,  infinity, doublelowquotemark ] };
+    key <AE09> { [ 9, parenleft,  leftdoublequotemark, leftsinglequotemark ] };
+    key <AE10> { [ 0, parenright,  rightdoublequotemark, rightsinglequotemark ] };
+    key <AE11> { [ minus, underscore, endash, emdash ] };
+    key <AE12> { [ equal, plus, notequal, plusminus ] };
+
+    key <AD03> { [ e, E, EuroSign ] };
+    key <AD07> { [ u, U, udiaeresis, Udiaeresis ] };
+    key <AD09> { [ o, O, odiaeresis, Odiaeresis ] };
+
+    key <AC01> { [ a, A, adiaeresis, Adiaeresis ] };
+    key <AC02> { [ s, S, ssharp ] };
+    key <AC06> { [ h, H, U20BD ] };
+    key <AC10> { [ less, greater, lessthanequal, greaterthanequal ] };
+    key <AC11> { [ apostrophe, quotedbl, grave, U0301 ] };
+
+    key <AB02> { [ x, X, multiply ] };
+    key <AB06> { [ n, N, U2116 ] };
+    key <AB08> { [ comma, semicolon ] };
+    key <AB09> { [ period, colon, ellipsis ] };
+    key <AB10> { [ slash, ampersand ] };
+
+    include "level3(ralt_switch)"
+};
