@@ -140,12 +140,16 @@ alias gaa='git add .'
 alias gpl='git pull'
 alias gpr='git pull --rebase'
 alias gps='git push'
+alias gpsf='git push --force-with-lease'
 alias gst='git status'
 alias glg='git lg'
 alias gl='git l'
 gcm() {
   git commit -m "$*"
 }
+alias gcam='git commit --amend'
+alias gcamn='git commit --amend --no-edit'
+alias gmg='git merge'
 
 #ls
 alias ll='exa -alghF'

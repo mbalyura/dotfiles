@@ -252,8 +252,8 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+alt+b",
-    "command": "git.checkout"
+    "key": "ctrl+shift+x",
+    "command": "chatgpt.openSidebar"
   },
   // {
   //   "key": "ctrl+d",

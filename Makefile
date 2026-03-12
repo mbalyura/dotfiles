@@ -24,11 +24,14 @@ apply:
 # 	cp ~/.config/kanata/config ./kbd/kanata/config
 # 	cp ~/Downloads/vimium-options.json ./kbd
 
-backup:
-	make cp
-	git add . -f && git commit -m 'backup_${CURRENT_DATE}' && git push
-
 apply-layout:
 	sudo cp ./kbd/layout/ru_custom /usr/share/X11/xkb/symbols/ru_custom \
 		&& sudo cp ./kbd/layout/en_custom /usr/share/X11/xkb/symbols/en_custom \
 		&& sudo dpkg-reconfigure xkb-data
+
+push:
+	git add . -f && git commit -m 'backup_${CURRENT_DATE}' && git push
+
+backup:
+	make cp
+	make push
