@@ -208,10 +208,6 @@
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
-    "key": "ctrl+shift+x",
-    "command": "workbench.view.debug"
-  },
-  {
     "key": "ctrl+shift+up",
     "command": "workbench.action.terminal.resizePaneUp",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
@@ -252,8 +248,16 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+shift+alt+b",
+    "command": "git.checkout"
+  },
+  {
+    "key": "ctrl+alt+x",
+    "command": "chatgpt.addToThread"
+  },
+  {
     "key": "ctrl+shift+x",
-    "command": "chatgpt.openSidebar"
+    "command": "chatgpt.sidebarSecondaryView.focus"
   },
   // {
   //   "key": "ctrl+d",

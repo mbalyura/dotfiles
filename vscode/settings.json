@@ -140,7 +140,7 @@
     "gitlens.views.branches.branches.layout": "list",
     "redhat.telemetry.enabled": false,
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1765360633814, // open files temporary!!!!
+    "php-cs-fixer.lastDownload": 1775545458963, // open files temporary!!!!
     // "bracket-pair-colorizer-2.showBracketsInGutter": true,
     // "bracket-pair-colorizer-2.showBracketsInRuler": true,
     "workbench.colorCustomizations": {
@@ -562,7 +562,6 @@
     ],
     "intelephense.environment.phpVersion": "7.4.2",
     "phpcs.enable": false,
-    "workbench.productIconTheme": "fluent-icons",
     "codeium.enableConfig": {
         "*": true,
         "properties": true
@@ -687,5 +686,7 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "workbench.editor.enablePreview": false,
+    "workbench.productIconTheme": "fluent-icons",
+    "chat.viewSessions.orientation": "stacked",
     // "keyboard.dispatch": "colemak"
 }
