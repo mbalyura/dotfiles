@@ -21,7 +21,3 @@
 	recent = for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | tac
 [url "https://git@"]
 	insteadOf = git://
-[safe]
-	directory = /home/f1del/dev/wordpress-docker/plugins/dmc-social-media
-	directory = /home/f1del/dev/wordpress-docker/plugins/dmc-forms
-	directory = /home/f1del/dev/wordpress-docker/plugins/dmc-log
