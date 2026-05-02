@@ -6,9 +6,15 @@
 	editor = micro
 [credential]
 	helper = store
+[init]
+	defaultBranch = master
 [alias]
 	st = status
 	co = checkout
+	br = branch
+	cm = commit
+	ps = push
+	pl = pull
 	pu = push -u origin HEAD
 	graph = log --graph --abbrev-commit --decorate --all
 	hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
@@ -19,5 +25,24 @@
 	df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
 	tags = for-each-ref --sort=creatordate --format '%(refname:strip=2) %09  %(creatordate:short)' refs/tags
 	recent = for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | tac
+[pull]
+	rebase = true						 # Rebase (instead of merge) on pull
+[push]
+	autoSetupRemote = true	 # Automatically set upstream branch on push
+[diff]
+	algorithm = histogram    # Clearer diffs on moved/edited lines
+	colorMoved = plain       # Highlight moved blocks in diffs
+	mnemonicPrefix = true    # More intuitive refs in diff output
+[commit]
+	verbose = true           # Include diff comment in commit message template
+[column]
+	ui = auto 					     # Output in columns when possible
+[branch]
+	sort = -committerdate    # Sort branches by most recent commit first
+[tag]
+	sort = -version:refname  # Sort version numbers as you would expect
+[rerere]
+	enabled = true           # Record and reuse conflict resolutions
+	autoupdate = true        # Apply stored conflict resolutions automatically
 [url "https://git@"]
 	insteadOf = git://
