@@ -20,7 +20,10 @@ apply-git:
 	cp ./dotfiles/.gitignore ~ -v
 
 apply-bash:
+	rm -rf ~/.bash/ -v
+	cp -r ./dotfiles/.bash ~ -v
 	cp ./dotfiles/.bashrc ~ -v
+	@echo "Bash config applied. Run: source ~/.bashrc"
 
 apply-vsc:
 	cp ./vscode/my.code-snippets ~/.config/Code/User/snippets/ -v

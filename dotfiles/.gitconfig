@@ -13,8 +13,9 @@
 	co = checkout
 	br = branch
 	cm = commit
-	ps = push
+	mg = merge
 	pl = pull
+	ps = push
 	pu = push -u origin HEAD
 	graph = log --graph --abbrev-commit --decorate --all
 	hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
