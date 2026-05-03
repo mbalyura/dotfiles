@@ -24,6 +24,18 @@ lip() {
 
 
 ######################## Transcoding ########################
+# Use ImageMagick 7's `magick` when available, otherwise fall back to IM6's `convert`.
+imconvert() {
+  if command -v magick >/dev/null 2>&1; then
+    magick "$@"
+  elif command -v convert >/dev/null 2>&1; then
+    convert "$@"
+  else
+    echo "ImageMagick not found: need magick or convert" >&2
+    return 1
+  fi
+}
+
 # Transcode a video to a good-balance 1080p that's great for sharing online
 transcode-video-1080p() {
   ffmpeg -i "$1" -vf scale=1920:1080 -c:v libx264 -preset fast -crf 23 -c:a copy "${1%.*}-1080p.mp4"
@@ -37,35 +49,42 @@ img2jpg() {
   img="$1"
   shift
 
-  magick "$img" "$@" -quality 85 -strip "${img%.*}-converted.jpg"
+  imconvert "$img" "$@" -quality 85 -strip "${img%.*}-converted.jpg"
+}
+# Transcode any image to WebP for smaller, web-friendly files
+img2webp() {
+  img="$1"
+  shift
+
+  imconvert "$img" "$@" -quality 85 -strip "${img%.*}-converted.webp"
 }
 # Transcode any image to a small JPG (max 1080px wide)
 img2jpg-small() {
   img="$1"
   shift
 
-  magick "$img" "$@" -resize 1080x\> -quality 85 -strip "${img%.*}-small.jpg"
+  imconvert "$img" "$@" -resize 1080x\> -quality 85 -strip "${img%.*}-small.jpg"
 }
 # Transcode any image to a 4K JPG (max 2160px wide)
 img2jpg-medium() {
   img="$1"
   shift
 
-  magick "$img" "$@" -resize 2160x\> -quality 85 -strip "${img%.*}-medium.jpg"
+  imconvert "$img" "$@" -resize 2160x\> -quality 85 -strip "${img%.*}-medium.jpg"
 }
 # Transcode any image to a 6K JPG (max 3160px wide)
 img2jpg-large() {
   img="$1"
   shift
 
-  magick "$img" "$@" -resize 3160x\> -quality 85 -strip "${img%.*}-large.jpg"
+  imconvert "$img" "$@" -resize 3160x\> -quality 85 -strip "${img%.*}-large.jpg"
 }
 # Transcode any image to compressed-but-lossless PNG
 img2png() {
   img="$1"
   shift
 
-  magick "$img" "$@" -strip -define png:compression-filter=5 \
+  imconvert "$img" "$@" -strip -define png:compression-filter=5 \
     -define png:compression-level=9 \
     -define png:compression-strategy=1 \
     -define png:exclude-chunk=all \

@@ -12,7 +12,7 @@ function open {
 # ls
 if command -v eza &> /dev/null; then
   alias ls='eza -lh --group-directories-first --icons=auto'
-  alias ll='eza -alghF'
+  alias ll='eza -alghF --group-directories-first --icons=auto'
   alias la='eza -A'
   alias l='eza -F'
   alias lt='eza --tree --level=2 --long --icons --git'
@@ -85,8 +85,8 @@ fi
 alias nr='npm run'
 alias ni='npm install'
 alias nrm='npm remove'
-alias dev='if [[ $(docker compose ls -q) != $(pwd | xargs basename) ]]; then echo "stopping old containers (if needed)..." && docker ps -q | xargs docker stop ; fi; nr start && nr wpack'
 alias pn='pnpm'
+alias dev='if [[ $(docker compose ls -q) != $(pwd | xargs basename) ]]; then echo "stopping old containers (if needed)..." && docker ps -q | xargs docker stop ; fi; nr start && nr wpack'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
