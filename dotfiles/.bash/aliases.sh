@@ -41,13 +41,21 @@ alias gmg='git merge'
 #misc
 alias myip='curl ipinfo.io/ip && echo ""'
 alias mountgdr='google-drive-ocamlfuse ~/mygoogledrive'
-alias ch7='sudo chmod -R 777'
-alias ch6='sudo chmod -R 666'
+unalias cperm 2>/dev/null
+function cperm {
+  # apply default permissions (755 for directories, 644 for files) to all items in a directory
+  local dir="${1:?Usage: cperm <directory>}"
+  sudo find "$dir" -type d -exec chmod 755 {} +
+  sudo find "$dir" -type f -exec chmod 644 {} +
+}
+alias mine='sudo chown $(id -un):$(id -gn) -R'
 alias docker-compose='docker compose'
 alias tru='docker-compose -f /home/f1del/Downloads/docker-transmission-openvpn/docker-compose.yml up -d && sleep 3 && firefox --new-tab http://localhost:9091/transmission/web/'
 alias trd='docker-compose -f /home/f1del/Downloads/docker-transmission-openvpn/docker-compose.yml down'
 alias bv='~/bin/bash-video.sh'
 alias bat='batcat'
+alias p='prs'
+alias pc='prs c'
 
 # fzf with preview
 if command -v fzf &> /dev/null; then
