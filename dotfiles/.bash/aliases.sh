@@ -56,6 +56,8 @@ alias bv='~/bin/bash-video.sh'
 alias bat='batcat'
 alias p='prs'
 alias pc='prs c'
+alias ai='aichat'
+
 
 # fzf with preview
 if command -v fzf &> /dev/null; then

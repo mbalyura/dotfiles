@@ -93,38 +93,51 @@ img2png() {
 
 
 ######################## Worktrees ########################
-# Create a new worktree and branch from within current git directory.
-ga() {
+# Create a worktree from an existing branch, or create branch+worktree if missing.
+gwa() {
   if [[ -z "$1" ]]; then
-    echo "Usage: ga [branch name]"
+    echo "Usage: gwa [branch name]"
     return 1
   fi
 
   local branch="$1"
   local base="$(basename "$PWD")"
-  local wt_path="../${base}--${branch}"
+  local branch_path="${branch//\//-}"
+  local wt_path="../${base}--${branch_path}"
+  local created_branch=0
 
-  git worktree add -b "$branch" "$wt_path"
+  if git show-ref --verify --quiet "refs/heads/$branch"; then
+    git worktree add "$wt_path" "$branch"
+  else
+    git worktree add -b "$branch" "$wt_path"
+    created_branch=1
+  fi
+  if [[ $created_branch -eq 1 ]]; then
+    touch "$wt_path/.gwa-created-branch"
+  fi
   mise trust "$wt_path"
   cd "$wt_path"
 }
 
-# Remove worktree and branch from within active worktree directory.
-gd() {
-  if gum confirm "Remove worktree and branch?"; then
-    local cwd base branch root worktree
+# Remove active worktree; delete branch only if it was created by gwa().
+gwd() {
+  if gum confirm "Remove worktree (and delete branch if it was newly created)"; then
+    local cwd branch common_dir main_repo delete_branch
 
     cwd="$(pwd)"
-    worktree="$(basename "$cwd")"
+    branch="$(git symbolic-ref --quiet --short HEAD)" || return 1
+    common_dir="$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null || git rev-parse --git-common-dir)" || return 1
+    main_repo="${common_dir%/.git}"
+    delete_branch=0
 
-    # split on first `--`
-    root="${worktree%%--*}"
-    branch="${worktree#*--}"
+    if [[ -f "$cwd/.gwa-created-branch" ]]; then
+      delete_branch=1
+    fi
 
-    # Protect against accidentally nuking a non-worktree directory
-    if [[ "$root" != "$worktree" ]]; then
-      cd "../$root"
-      git worktree remove "$cwd" --force || return 1
+    cd "$main_repo" || return 1
+    git worktree remove "$cwd" --force || return 1
+
+    if [[ $delete_branch -eq 1 ]]; then
       git branch -D "$branch"
     fi
   fi

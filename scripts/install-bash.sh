@@ -14,7 +14,7 @@ TOOLS=(
   ffmpeg                   # media conversion and inspection tools
   fzf                      # interactive fuzzy finder
   google-drive-ocamlfuse   # Google Drive mount helper
-  gum                      # interactive prompts for shell scripts
+  gum                      # interactive prompts for shell scripts # https://github.com/charmbracelet/gum/releases
   imagemagick              # image conversion and manipulation tools
   lesspipe                 # richer less previews for archives and binary files
   libnotify                # desktop notification helper used by notify-send
