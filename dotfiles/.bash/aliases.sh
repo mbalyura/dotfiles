@@ -34,6 +34,7 @@ alias gpr='git pull --rebase'
 alias gps='git push'
 alias gpsf='git push --force-with-lease'
 alias gst='git status'
+alias gsh='git stash'
 alias glg='git lg'
 alias gl='git l'
 alias gmg='git merge'
@@ -57,7 +58,7 @@ alias bat='batcat'
 alias p='prs'
 alias pc='prs c'
 alias ai='aichat'
-
+alias y='yazi'
 
 # fzf with preview
 if command -v fzf &> /dev/null; then

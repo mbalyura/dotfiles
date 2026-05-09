@@ -10,6 +10,7 @@
 	defaultBranch = master
 [alias]
 	st = status
+	sh = stash
 	co = checkout
 	br = branch
 	cm = commit
