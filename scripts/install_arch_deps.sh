@@ -4,10 +4,16 @@ sudo pacman -Syu niri xwayland-satellite xdg-desktop-portal-gnome xdg-desktop-po
 
 sudo pacman -S \
 alacritty micro firefox tmux btop networkmanager \
+git base base-devel \
 nautilus gnome-keyring \
 cliphist \
-ttf-fira-code \
-yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick
+# screenshot stuff
+grim slurp satty \
+hyprpicker \
+ttf-fira-code ttf-jetbrains-mono-nerd \
+fastfetch \
+# yazi stuff
+yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick ueberzugpp
 
 
 # yay
@@ -19,5 +25,6 @@ dragon-drop
 # after install
 
 sudo systemctl enable --now NetworkManager
+# enable dark theme for naitilus
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 dconf write /org/gnome/desktop/interface/color-scheme \'"prefer-dark"\'

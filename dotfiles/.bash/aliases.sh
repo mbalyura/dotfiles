@@ -23,6 +23,7 @@ fi
 alias g='git'
 alias gaa='git add .'
 alias gc='git commit'
+alias gco='git checkout'
 unalias gcm 2>/dev/null
 function gcm {
   git commit -m "$*"
@@ -58,7 +59,14 @@ alias bat='batcat'
 alias p='prs'
 alias pc='prs c'
 alias ai='aichat'
-alias y='yazi'
+# yazi shell wrapper t provides the ability to change the current working directory when exiting
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}
 
 # fzf with preview
 if command -v fzf &> /dev/null; then
