@@ -40,6 +40,23 @@ alias glg='git lg'
 alias gl='git l'
 alias gmg='git merge'
 
+# Docker
+alias d='docker'
+alias dps='docker ps'
+alias di='docker images'
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias de='docker exec -it'
+alias dbash='de $(dps -q) bash'
+alias dstop='docker stop $(docker ps -q)'
+alias dstopall='docker stop $(docker ps -aq)'
+alias drmall='docker rm $(docker ps -aq)'
+alias drmiall='docker rmi $(docker images -q)'
+alias dcm='docker compose'
+alias dcms='docker compose ps'
+alias dcup='docker compose up -d'
+alias dcd='docker compose down'
+
 #misc
 alias myip='curl ipinfo.io/ip && echo ""'
 alias mountgdr='google-drive-ocamlfuse ~/mygoogledrive'
@@ -60,6 +77,7 @@ alias p='prs'
 alias pc='prs c'
 alias ai='aichat'
 # yazi shell wrapper t provides the ability to change the current working directory when exiting
+unalias y 2>/dev/null
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"

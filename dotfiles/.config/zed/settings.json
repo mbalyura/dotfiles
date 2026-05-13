@@ -1,0 +1,61 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "format_on_save": "off",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "terminal": {
+    "font_family": "monospace"
+  },
+  "project_panel": {
+    "auto_fold_dirs": false
+  },
+  "base_keymap": "VSCode",
+  "preview_tabs": {
+    "enabled": false
+  },
+  "tabs": {
+    "show_close_button": "hidden"
+  },
+  "multi_cursor_modifier": "alt",
+  "fast_scroll_sensitivity": 4.0,
+  "scroll_sensitivity": 1.5,
+  "minimap": {
+    "show": "never",
+    "max_width_columns": 50
+  },
+  "autosave": "on_focus_change",
+  "buffer_font_family": "Fira Code",
+  "file_types": {
+    "html": [
+      "*.twig"
+    ],
+    "php": [
+      "*.tpl",
+      "*.inc"
+    ]
+  },
+  "colorize_brackets": true,
+  "linked_edits": true,
+  "show_whitespaces": "all",
+  "tab_size": 2,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Monokai Night Soft",
+    "dark": "Monokai Nebula",
+  },
+}

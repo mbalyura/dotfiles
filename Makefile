@@ -6,9 +6,9 @@ cp:
 	cp ~/tilix.json ./dotfiles
 	cp ~/.bashrc ./dotfiles
 	cp ~/.tmux.conf ./dotfiles
-	cp ~/.config/Code/User/snippets/my.code-snippets ./vscode
-	cp ~/.config/Code/User/keybindings.json ./vscode
-	cp ~/.config/Code/User/settings.json ./vscode
+	cp ~/.config/Code/User/snippets/my.code-snippets ./config/Code/User/snippets/
+	cp ~/.config/Code/User/keybindings.json ./config/Code/User/
+	cp ~/.config/Code/User/settings.json ./config/Code/User/
 # 	cp ~/.config/kanata/config ./kbd/kanata/config
 	cp ~/Downloads/vimium-options.json ./kbd
 
@@ -26,9 +26,7 @@ apply-bash:
 	@echo "Bash config applied. Run: source ~/.bashrc"
 
 apply-vsc:
-	cp ./vscode/my.code-snippets ~/.config/Code/User/snippets/ -v
-	cp ./vscode/keybindings.json ~/.config/Code/User/ -v
-	cp ./vscode/settings.json ~/.config/Code/User/ -v
+	cp -r ./config/Code ~/.config -v
 
 apply-layout:
 	sudo cp ./kbd/layout/ru_custom /usr/share/X11/xkb/symbols/ru_custom \

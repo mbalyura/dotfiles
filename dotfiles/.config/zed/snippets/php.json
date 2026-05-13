@@ -1,0 +1,44 @@
+{
+  "Php tag": {
+		"prefix": "php",
+		"body": "<?php $1 ?>",
+		"description": "Insert <?php ?>"
+	},
+  "Php echo": {
+		"prefix": "pe",
+		"body": "<?= $1 ?>",
+		"description": "Insert <?= ?>"
+	},
+  "Php template if": {
+    "prefix": "pif",
+    "body": [
+      "<?php if ($1): ?>",
+      "<?php endif; ?>"
+    ],
+  },
+  "Php template if else": {
+    "prefix": "pife",
+    "body": [
+      "<?php if ($1): ?>",
+      "<?php else ($2): ?>",
+      "<?php endif; ?>"
+    ]
+  },
+  "Php template foreach": {
+    "prefix": "pife",
+    "body": [
+      "<?php foreach ($1 as $2) : ?>",
+      "<?php endforeach; ?>"
+    ]
+  },
+  "Php dump and die": {
+		"prefix": "dd",
+		"body": [
+			"echo '<pre>';",
+			"print_r($1);",
+			"echo '</pre>';",
+			"die();"
+		],
+		"description": "Dump and die"
+	}
+}
