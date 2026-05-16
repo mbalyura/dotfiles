@@ -72,7 +72,9 @@ alias docker-compose='docker compose'
 alias tru='docker-compose -f /home/f1del/Downloads/docker-transmission-openvpn/docker-compose.yml up -d && sleep 3 && firefox --new-tab http://localhost:9091/transmission/web/'
 alias trd='docker-compose -f /home/f1del/Downloads/docker-transmission-openvpn/docker-compose.yml down'
 alias bv='~/bin/bash-video.sh'
-alias bat='batcat'
+if ! command -v bat >/dev/null 2>&1; then
+  alias bat='batcat'
+fi
 alias p='prs'
 alias pc='prs c'
 alias ai='aichat'
@@ -88,7 +90,7 @@ function y() {
 
 # fzf with preview
 if command -v fzf &> /dev/null; then
-  alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
+  alias ff="fzf --preview 'if command -v bat >/dev/null 2>&1; then bat --style=numbers --color=always {}; else batcat --style=numbers --color=always {}; fi'"
   # open selected file in editor
   unalias eff 2>/dev/null
   function eff {

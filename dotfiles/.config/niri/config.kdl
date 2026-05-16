@@ -14,13 +14,13 @@ input {
 
             // For example:
             //layout "us,ru"
-            layout "en_custom,ru_custom" 
+            layout "en_custom,ru_custom"
             variant "en_universal,ru_universal"
             options "grp:shifts_toggle, caps:backspace, lv3:ralt"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using	
+            // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
         }
 
@@ -69,7 +69,9 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
+    // focus-follows-mouse max-scroll-amount="0%
+    // focus-follows-mouse
+
 }
 
 // You can configure outputs by their name, which you can find
@@ -78,7 +80,7 @@ input {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -88,10 +90,10 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
+    mode "2880x1800@120.000"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    scale 1.5
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -106,7 +108,14 @@ input {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1280 y=0
+    // position x=1280 y=0
+
+    variable-refresh-rate // on-demand=true
+}
+
+output "DP-1" {
+	mode "3440x1440@59.973"
+	scale 1
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -267,6 +276,12 @@ layout {
     }
 }
 
+environment {
+	// fix missing icons in launcher
+	//QT_QPA_PLATFORMTHEME "qt6ct"
+	QT_QPA_PLATFORMTHEME "gtk3"
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -307,6 +322,36 @@ animations {
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 0.75
+}
+
+
+workspace "a"
+workspace "b"
+workspace "c"
+workspace "d"
+workspace "e"
+workspace "f"
+
+
+window-rule {
+ 	match app-id="Alacritty"
+    opacity 0.95
+}
+
+window-rule {
+ 	match app-id="Alacritty" at-startup=true
+	open-on-workspace "a"
+	default-column-width { proportion 0.85; }
+}
+
+window-rule {
+	match app-id=r#"firefox$"# at-startup=true
+	open-on-workspace "b"
+}
+
+window-rule {
+	match app-id=r#"firefox$"#
+	open-maximized true
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -351,6 +396,26 @@ window-rule {
     clip-to-geometry true
 }
 
+
+// annotation tool used by screenshot-maker
+window-rule {
+	match app-id=r#"^com\.gabm\.satty$"#
+	open-floating true
+	min-width 730
+	min-height 300
+}
+
+window-rule {
+ 	match app-id=r#"^floating\.nautilus$"#
+    open-floating true
+}
+
+// Set the overview wallpaper on the backdrop. Requires “Enable overview wallpaper” to be turned ON in Noctalia’s settings
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -369,7 +434,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    //Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -409,19 +474,19 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+    //Mod+H     { focus-column-left; }
+    //Mod+J     { focus-window-down; }
+    //Mod+K     { focus-window-up; }
+    //Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
     Mod+Ctrl+Up    { move-window-up; }
     Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    // Mod+Ctrl+H     { move-column-left; }
+    // Mod+Ctrl+J     { move-window-down; }
+    // Mod+Ctrl+K     { move-window-up; }
+    // Mod+Ctrl+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -613,7 +678,10 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Print {
+    	//screenshot;
+    	spawn "script" "--command" "XDG_CURRENT_DESKTOP=niri flameshot gui" "/dev/null";
+    }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
@@ -628,7 +696,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
+    // Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
@@ -636,15 +704,32 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 
 
+	// Custom
+	Mod+E { spawn "nautilus"; }
+	Mod+Shift+E { spawn "nautilus" "--name=floating.nautilus"; }
+	Mod+B { spawn "firefox"; }
+
 
     // Noctalia
     // Core Noctalia binds
-    Mod+Space hotkey-overlay-title="Noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+S hotkey-overlay-title="Noctalia control center" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
-    Mod+N hotkey-overlay-title="Noctalia settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+Space hotkey-overlay-title="Noctalia Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+K hotkey-overlay-title="Noctalia Control Center" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Mod+N hotkey-overlay-title="Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+L hotkey-overlay-title="Screen Lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+
+
+    // Noctalia Plugins
+    Mod+G hotkey-overlay-title="Clipboard Manager" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:clipboard" "toggle"; }
+
+    // Custom scripts
+
+	Mod+P hotkey-overlay-title="Pick color" { spawn-sh "sh -c 'killall hyprpicker || { if hyprpicker --autocopy --lowercase-hex; then sleep 0.1; COLOR=$(wl-paste); notify-send \"Copied: $COLOR\"; fi; }'"; }
+    Mod+S hotkey-overlay-title="Screenshot of an Area" { spawn "~/bin/dfr-screenshot" "region"; }
+    Mod+Shift+S  hotkey-overlay-title="Screenshot of a Window" { spawn "~/bin/dfr-screenshot" "window"; }
+    //Mod+Ctrl+S       { spawn "~/bin/dot-screenshot" "monitor-focused"; }
+    //Mod+Ctrl+Shift+S { spawn "~/bin/dot-screenshot" "monitor-all"; }
 }
 
 spawn-at-startup "qs" "-c" "noctalia-shell"
 
 include "./noctalia.kdl"
-

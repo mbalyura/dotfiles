@@ -31,7 +31,7 @@ apply-vsc:
 apply-layout:
 	sudo cp ./kbd/layout/ru_custom /usr/share/X11/xkb/symbols/ru_custom \
 		&& sudo cp ./kbd/layout/en_custom /usr/share/X11/xkb/symbols/en_custom \
-		&& sudo dpkg-reconfigure xkb-data
+		# && sudo dpkg-reconfigure xkb-data
 
 apply-all:
 	make apply-tmux
