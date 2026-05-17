@@ -14,9 +14,11 @@ fi
 # Use: Ctrl-R history, Ctrl-T files, Alt-C directories,
 # fuzzy completion with **<Tab> (kill **<Tab>, ssh **<Tab>, etc, vim **<Tab>, etc).
 if command -v fzf >/dev/null 2>&1; then
-  export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+  export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 
   if command -v fd >/dev/null 2>&1; then
+    export FZF_CTRL_T_OPTS="--preview='bat --color=always {}'"
+    export FZF_ALT_C_OPTS="--preview='ls {}'"
     export FZF_CTRL_T_COMMAND='fd --type f --hidden --follow --exclude .git'
     export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
   fi

@@ -16,7 +16,7 @@ else
 fi
 export MANPAGER="sh -c 'col -bx | ${MAN_BAT_CMD} -l man -p'"
 
-export PATH="$HOME/bin:~/.local/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 
 # n node version manager
 export N_PREFIX="$HOME/.n"
