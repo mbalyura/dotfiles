@@ -15,17 +15,21 @@ input {
             // For example:
             //layout "us,ru"
             layout "en_custom,ru_custom"
-            variant "en_universal,ru_universal"
-            options "grp:shifts_toggle, caps:backspace, lv3:ralt"
+            //variant "en_universal,ru_universal"
+            variant "en_universal,ru_colemak_hard_universal"
+            options "grp:shifts_toggle, grp:sclk_toggle, caps:backspace, lv3:ralt"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
+            // from org.freedesktop.locale1. You can control these using	
             // localectl set-x11-keymap.
         }
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
+
+		// remember the keyboard layout on a per-window basis instead of globally
+        track-layout "window"
     }
 
     // Next sections include libinput settings.
@@ -324,6 +328,13 @@ animations {
     // slowdown 0.75
 }
 
+gestures {
+    hot-corners {
+        bottom-left
+    }
+}
+
+
 
 workspace "a"
 workspace "b"
@@ -336,12 +347,18 @@ workspace "f"
 window-rule {
  	match app-id="Alacritty"
     opacity 0.95
+   	default-column-width { proportion 0.5; }
 }
 
 window-rule {
- 	match app-id="Alacritty" at-startup=true
+ 	match app-id="kitty"
+    opacity 0.95
+	default-column-width { proportion 0.5; }
+}
+
+window-rule {
+ 	match app-id="kitty" at-startup=true
 	open-on-workspace "a"
-	default-column-width { proportion 0.85; }
 }
 
 window-rule {
@@ -432,7 +449,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    // Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     //Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -469,6 +487,7 @@ binds {
     Mod+O repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
+    Ctrl+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -678,9 +697,9 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print {
+    Print { 
     	//screenshot;
-    	spawn "script" "--command" "XDG_CURRENT_DESKTOP=niri flameshot gui" "/dev/null";
+    	spawn "script" "--command" "XDG_CURRENT_DESKTOP=niri flameshot gui" "/dev/null"; 
     }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
@@ -705,7 +724,7 @@ binds {
 
 
 	// Custom
-	Mod+E { spawn "nautilus"; }
+	Mod+E { spawn "nautilus" "--new-window"; }
 	Mod+Shift+E { spawn "nautilus" "--name=floating.nautilus"; }
 	Mod+B { spawn "firefox"; }
 
@@ -716,6 +735,7 @@ binds {
     Mod+K hotkey-overlay-title="Noctalia Control Center" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
     Mod+N hotkey-overlay-title="Noctalia Settings" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+L hotkey-overlay-title="Screen Lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Ctrl+L hotkey-overlay-title="Suspend" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu lockAndSuspend"; }
 
 
     // Noctalia Plugins

@@ -5,4 +5,39 @@ desc = "Cancel input"
 
 [[mgr.prepend_keymap]]
 on  = "<C-n>"
-run = "shell -- dragon-drop -x -i -T %h"
+run = "shell -- ripdrag %s -x 2>/dev/null &"
+
+[[mgr.prepend_keymap]]
+on  = "<C-m>"
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
+[[mgr.append_keymap]]
+on = [ "g", "k" ]
+run = "cd ~/kbd"
+desc = "Go ~/kbd"
+
+[[mgr.append_keymap]]
+on = [ "g", "p" ]
+run = "cd ~/Pictures"
+desc = "Go ~/Pictures"
+
+[[mgr.append_keymap]]
+on = [ "g", "r" ]
+run = "cd ~/projects"
+desc = "Go ~/projects"
+
+[[mgr.append_keymap]]
+on = [ "g", "w" ]
+run = "cd ~/work"
+desc = "Go ~/work"
+
+[[mgr.append_keymap]]
+on = [ "g", "t" ]
+run = "cd ~/dotfiles"
+desc = "Go ~/dotfiles"
+
+[[mgr.append_keymap]]
+on = [ "g", "k" ]
+run = "cd ~/kbd"
+desc = "Go ~/kbd"

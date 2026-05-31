@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "1db18bb"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
+
+[[plugin.deps]]
+use = "ruudjhuu/f3d-preview"
+rev = "76d115d"
+hash = "6b2008327d65fe374d99f6b6ff007cba"
+
+[flavor]
+deps = []

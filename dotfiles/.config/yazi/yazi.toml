@@ -1,3 +1,25 @@
 [mgr]
 show_hidden = true
 
+[plugin]
+prepend_preloaders = [
+  # 3d objects
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run="f3d-preview"},
+]
+
+prepend_previewers = [
+  # 3d objects
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run="f3d-preview"},
+]
+
+[preview]
+wrap            = "no"
+tab_size        = 2
+max_width       = 1200
+max_height      = 1800
+cache_dir       = ""
+image_delay     = 30
+image_filter    = "triangle"
+image_quality   = 75
+ueberzug_scale  = 1
+ueberzug_offset = [ 0, 0, 0, 0 ]
