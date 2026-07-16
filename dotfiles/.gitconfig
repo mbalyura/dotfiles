@@ -23,8 +23,8 @@
 	llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
 	l = log --pretty=format:\"%C(yellow)%h %C(blue)%>(12)%ad %C(green)%<(7)%aN%C(red)%d %Creset%s\" --date=format:\"%Y-%m-%d %H:%M:%S\"
 	lg = log --name-status --pretty=format:\"%C(yellow)%h %C(blue)%>(12)%ad %C(green)%<(7)%aN%C(red)%d %Creset%s\" --date=format:\"%Y-%m-%d %H:%M:%S\"
-	a = "!git status --short | peco | awk '{print $2}' | xargs git add"
-	df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+	a = "!git status --short | fzf | awk '{print $2}' | xargs git add"
+	df = "!git hist | fzf | awk '{print $2}' | xargs -I {} git diff {}^ {}"
 	tags = for-each-ref --sort=creatordate --format '%(refname:strip=2) %09  %(creatordate:short)' refs/tags
 	recent = for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | tac
 [pull]

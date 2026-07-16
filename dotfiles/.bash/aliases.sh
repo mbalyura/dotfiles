@@ -35,10 +35,11 @@ alias gpr='git pull --rebase'
 alias gps='git push'
 alias gpsf='git push --force-with-lease'
 alias gst='git status'
-alias gsh='git stash'
+alias gsh='git stash -u'
 alias glg='git lg'
 alias gl='git l'
 alias gmg='git merge'
+alias grh='git reset --hard'
 
 # Docker
 alias d='docker'
@@ -55,6 +56,7 @@ alias drmiall='docker rmi $(docker images -q)'
 alias dcm='docker compose'
 alias dcms='docker compose ps'
 alias dcup='docker compose up -d'
+alias dcupf='docker compose up -d --force-recreate --build'
 alias dcd='docker compose down'
 
 #misc
